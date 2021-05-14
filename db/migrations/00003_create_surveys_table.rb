@@ -1,7 +1,7 @@
 Sequel.migration do
     up do 
-        create_table(:users) do 
-            primary_key     :user_id
+        create_table(:surveys) do 
+            primary_key     :survey_id
             String          :name, null:false
             DateTime        :created_at, default: Sequel::CURRENT_TIMESTAMP
             DateTime        :updated_at, default: Sequel::CURRENT_TIMESTAMP
@@ -9,6 +9,6 @@ Sequel.migration do
     end
 
     down do
-        drop_table(:users)
+        drop_table(:surveys)
     end
 end
