@@ -1,14 +1,17 @@
 Sequel.migration do
     up do 
-        create_table(:users) do 
-            primary_key     :user_id
-            String          :name, null:false
+        create_table(:careers) do 
+            primary_key     :career_id
+            String 	     :name
             DateTime        :created_at, default: Sequel::CURRENT_TIMESTAMP
             DateTime        :updated_at, default: Sequel::CURRENT_TIMESTAMP
         end
     end
 
     down do
-        drop_table(:users)
+        drop_table(:careers)
     end
 end
+
+
+
