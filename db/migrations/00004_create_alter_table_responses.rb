@@ -1,6 +1,6 @@
 Sequel.migration do
   up do
-    alter_table(:composes) do
+    alter_table(:responses) do
         add_foreign_key :user_id, :users, :null=>false
         add_foreign_key :choice_id, :choices, :null=>false
         add_foreign_key :cuestion_id, :cuestions, :null=>false

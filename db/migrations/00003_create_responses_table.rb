@@ -1,6 +1,6 @@
 Sequel.migration do
   up do
-    create_table(:composes) do
+    create_table(:responses) do
       primary_key   :id
       DateTime      :created_at,   default: Sequel::CURRENT_TIMESTAMP
       DateTime      :updated_at,   default: Sequel::CURRENT_TIMESTAMP
@@ -8,6 +8,6 @@ Sequel.migration do
   end
 
   down do
-    drop_table(:composes)
+    drop_table(:responses)
   end
 end
