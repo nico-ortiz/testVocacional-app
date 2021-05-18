@@ -1,4 +1,4 @@
-require './models/init.rb'
+  require './models/init.rb'
 
 class App < Sinatra::Base
   get '/' do

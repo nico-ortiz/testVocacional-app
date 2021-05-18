@@ -1,3 +1,3 @@
-class question < Sequel::Model
-
+class Question < Sequel::Model
+	
 end
