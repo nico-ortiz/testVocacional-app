@@ -16,4 +16,21 @@ class CareerTest < MiniTest::Unit::TestCase
     #Assert
     assert_equal(career.surveys.count,3)
   end
+
+  def test_career_has_many_outcomes
+    
+    #Arrange
+  	career = Career.create(name: 'Dentist')
+
+    #Act
+    Outcome.create(career_id: career.id);
+    Outcome.create(career_id: career.id);
+
+    #Assert
+    assert_equal(career.outcomes.count, 2)
+  end
+
+    
+
+    
 end
