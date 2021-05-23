@@ -9,9 +9,7 @@ class SurveyTest < MiniTest::Unit::TestCase
     # Act
     survey.username = ''
     # Assert
-    assert_equal survey.valid?, false
-
-    
+    assert_equal survey.valid?, false 
   end
 
   def test_survey_has_a_career
@@ -23,22 +21,17 @@ class SurveyTest < MiniTest::Unit::TestCase
     
     # Assert
     assert_equal(survey1.career.id,survey2.career.id)
-  
   end
 
-
-    def test_survey_has_diff_career
-      # Arrange
-      career1 = Career.create(name:'Agrimensor')
-      career2 = Career.create(name:'Peon de estancia')
-      survey1 = Survey.create(username:'Nico Ortiz', career_id: career1.id)
-      survey2 = Survey.create(username:'Joaco Moran', career_id: career2.id)
-      # Act
-      
-      # Assert
-      assert_equal(false,survey1.career.id==survey2.career.id)
-    end
-
+  def test_survey_has_diff_career
+    # Arrange
+    career1 = Career.create(name:'Agrimensor')
+    career2 = Career.create(name:'Peon de estancia')
+    survey1 = Survey.create(username:'Nico Ortiz', career_id: career1.id)
+    survey2 = Survey.create(username:'Joaco Moran', career_id: career2.id)
+    # Act
     
-
+    # Assert
+    assert_equal(false,survey1.career.id==survey2.career.id)
+  end
 end

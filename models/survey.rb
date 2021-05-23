@@ -2,8 +2,9 @@ class Survey < Sequel::Model
     many_to_one :career
     one_to_many :responses
 
+    plugin :validation_helpers
     def validate
     	super
-    		errors.add(:username, 'cannot be empty') if !username || username.empty?
+        validates_presence [:username]
   	end
 end
