@@ -23,8 +23,8 @@ class CareerTest < MiniTest::Unit::TestCase
   	career = Career.create(name: 'Dentist')
 
     #Act
-    Outcome.create(career_id: career.id);
-    Outcome.create(career_id: career.id);
+    Outcome.create(career_id: career.id, choice_id: 1);
+    Outcome.create(career_id: career.id, choice_id: 2);
 
     #Assert
     assert_equal(career.outcomes.count, 2)

@@ -5,6 +5,6 @@ class Survey < Sequel::Model
     plugin :validation_helpers
     def validate
     	super
-         validates_presence [:username]
+         validates_presence [:username, :career_id]
   	end
 end
