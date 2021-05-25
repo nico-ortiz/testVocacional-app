@@ -2,7 +2,12 @@
 
 class App < Sinatra::Base
   get '/' do
-    erb :hello_template
+    redirect :Main
+  end
+  
+  
+  get '/Main' do
+    erb :landing
   end
 
 
@@ -12,7 +17,7 @@ class App < Sinatra::Base
 
     if career.save
       [201, { 'Location' => "careers/#{career.id}" }, 'CREATED']
-      #redirect_to "http://localhost:9292/careers"
+      redirect :careers
     else
       [500, {}, 'Internal Server Error']
     end
@@ -46,26 +51,25 @@ class App < Sinatra::Base
   end
 
   get '/vocational-test' do
-    "Hello World"
+    erb :test_index
   end
 
   post '/surveys' do
-    survey = Survey.new(username: params[:username], career_id: 1)
+    survey = Survey.new(username: params[:name])
     if survey.save
-      [201, { 'Location' => "surveys/#{survey.username}" }, 'User created sucesfully']
+      [201, { 'Location' => "surveys/#{survey.id}" }, 'User created sucesfully'] 
+      sleep(1)
+      redirect :Main
     else
       [500, {}, 'Internal Server Error']
     end
   end
 
   get "/surveys" do
-    form = "<form action = '/surveys' method = 'POST'>" 
-    form += "<label for= 'nombre carrera'>Enter career</label>" 
-    form += "<br/>" 
-    form += "<input type = 'text' name = 'name' placeholder = 'Escribe carrera'>"
-    form += "<input type = 'submit' value = 'Enviar'>" 
-    form += "</form>"
+    @surveys = Survey.all
+    erb :info_survey_index 
   end
+  
   
 end
 
