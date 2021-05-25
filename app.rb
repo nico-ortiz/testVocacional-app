@@ -1,4 +1,4 @@
-  require './models/init.rb'
+   require './models/init.rb'
 
 class App < Sinatra::Base
   get '/' do
@@ -8,6 +8,28 @@ class App < Sinatra::Base
   get "/hello/:name" do
    @name = params[:name]
    erb :hello_template
+  end
+
+
+  post "/careers" do
+    career = Career.new(name: params[:name])
+
+    if career.save
+      [201, { 'Location' => "careers/#{career.id}" }, 'CREATED']
+    else
+      [500, {}, 'Internal Server Error']
+    end
+  end
+
+
+  get "/careers" do
+    @careers = Career.all
+    erb :careers_index
+  end
+
+  get "/careers/:id" do
+    @career = Career.find(id: params[:id])
+    erb :info_career_index 
   end
 
   post "/posts" do

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Carreers</title>
+    </head>
+
+    <body>
+        <form action = '/careers' method = 'POST'>
+            <label for= 'nombre carrera'>Enter career</label>
+            <br/>
+            <input type = 'text' name = 'name' placeholder = 'Escribe carrera'>
+            <input type = 'submit' value = 'Enviar'>
+        </form>
+    
+        <ul>
+            <% @careers.map do |career| %>
+            <li>
+                <a href = "careers/<%=career.id%>"> <%=career.name%> </a>
+                <p>
+                    Total of surveys: <%= career.surveys.count.to_s %>
+                </p>
+            </li>
+            <% end %>
+        </ul>
+    </body>
+</html>
