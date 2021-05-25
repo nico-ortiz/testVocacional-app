@@ -2,13 +2,9 @@
 
 class App < Sinatra::Base
   get '/' do
-    "Hello World"
+    erb :hello_template
   end
 
-  get "/hello/:name" do
-   @name = params[:name]
-   erb :hello_template
-  end
 
 
   post "/careers" do
@@ -16,6 +12,7 @@ class App < Sinatra::Base
 
     if career.save
       [201, { 'Location' => "careers/#{career.id}" }, 'CREATED']
+      #redirect_to "http://localhost:9292/careers"
     else
       [500, {}, 'Internal Server Error']
     end
@@ -47,5 +44,28 @@ class App < Sinatra::Base
     p = Post.where(id: 1).last
     p.description
   end
+
+  get '/vocational-test' do
+    "Hello World"
+  end
+
+  post '/surveys' do
+    survey = Survey.new(username: params[:username], career_id: 1)
+    if survey.save
+      [201, { 'Location' => "surveys/#{survey.username}" }, 'User created sucesfully']
+    else
+      [500, {}, 'Internal Server Error']
+    end
+  end
+
+  get "/surveys" do
+    form = "<form action = '/surveys' method = 'POST'>" 
+    form += "<label for= 'nombre carrera'>Enter career</label>" 
+    form += "<br/>" 
+    form += "<input type = 'text' name = 'name' placeholder = 'Escribe carrera'>"
+    form += "<input type = 'submit' value = 'Enviar'>" 
+    form += "</form>"
+  end
+  
 end
 

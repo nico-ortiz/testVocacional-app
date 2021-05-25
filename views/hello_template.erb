@@ -3,11 +3,29 @@
 <html>
     <head>
         <title>
-          My example
+          Vocational Test 2021
         </title>
     </head>
     <body>
-      Hola <b><%= @name %></b>!
+      <h1>
+        Welcome!
+      </h1>
+        <div>
+          <h2>           
+              <a href="http://localhost:9292/careers" style="text-decoration: none">· Carrers</a>
+          </h2>
+          <h2>
+              <a href="http://localhost:9292/vocational-test" style="text-decoration: none">· Vocational Test</a>
+          </h2>
+        </div>
+        <div>
+          <form action = '/surveys' method = 'POST'>
+          <label for= 'Enter your name'>Enter your username</label>
+          <br/>
+          <input type = 'text' name = 'name' placeholder = 'Username'>
+          <input type = 'submit' value = 'Next'>
+          </form> 
+        </div>
     </body>
 </html>
 
