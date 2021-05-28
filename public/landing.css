@@ -1,0 +1,37 @@
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(images/signo.jpg);
+    text-align: center;
+}
+
+
+
+h1{
+    text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255), 1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
+    color: rgb(70, 55, 29);
+    font-family: 'Quicksand', sans-serif;
+    font-style: 'Italic';
+    font-size: 120px;
+
+}
+
+.list{
+    font-size: 30px;
+    display: inline-flex;
+}
+
+.list a{
+    text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255), 1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
+    padding: 0 30px;
+    color: rgb(0, 0, 0);
+    font-family: 'Quicksand', sans-serif;
+    font-style: 'Italic';
+    list-style: none;
+}
+
+.list :hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
