@@ -1,0 +1,46 @@
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(images/fondo.jpg);
+}
+
+.careerslist{
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+.careerslist ul li {
+    color: rgb(160, 114, 85);
+    list-style: none;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.careerslist ul li a {
+    color: rgb(2, 2, 2);
+    text-decoration: none;
+}
+
+
+.form{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.input{
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+    left: 30px;
+}
+
+.text{
+    font-family: 'Quicksand', sans-serif;
+    width: 300px;
+}
+
+.button{
+
+    font-family: 'Quicksand', sans-serif;
+}
