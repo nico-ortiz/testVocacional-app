@@ -1,9 +1,10 @@
 #Clean Dataset
 Survey.all.map{|survey| survey.destroy}
+Outcome.all.map{|outcome| outcome.destroy}
 Career.all.map{|career| career.destroy}
 Choice.all.map{|choice| choice.destroy}
 Question.all.map{|question| question.destroy}
-
+Outcome.all.map{|outcome| outcome.destroy}
 
 #Create Careers
 economia = Career.create(name: 'Economia')
@@ -25,7 +26,7 @@ sociologia = Career.create(name: 'Sociologia')
 veterinaria = Career.create(name: 'Veterinaria')
 
 
-#Question
+#Questions
 question1 = Question.create(number: 1, description: 'Me trasladaria a una zona agricola/ganadera para ejercer mi profesion.', name: 'Question 1', type: 'type 1')
 question2 = Question.create(number: 2, description: 'Tengo buena memoria y no me cuesta estudiar y retener fórmulas y palabras técnicas.', name: 'Question 2', type: 'type 2')
 question3 = Question.create(number: 3, description: 'Me gusta escribir. En general mis trabajos son largos y están bien organizados.', name: 'Question 3', type: 'type 3')
@@ -42,7 +43,8 @@ question13 = Question.create(number: 13, description: 'Si mi blog fuera temátic
 question14 = Question.create(number: 14, description: 'Integraría un equipo de trabajo encargado de producir un audiovisual sobre:', name: 'Question 14', type: 'type 14')
 question15 = Question.create(number: 15, description: 'Sería importante destacarme como:', name: 'Question 15', type: 'type 15')
 
-#Choice
+
+#Choices
 choice1Q1 = Choice.create(text: 'Si', question: question1)
 choice2Q1 = Choice.create(text: 'No', question: question1)		
 choice1Q2 = Choice.create(text: 'Si', question: question2)
@@ -83,6 +85,46 @@ choice3Q15 = Choice.create(text: 'Un deportista famoso por su destreza física y
 choice4Q15 = Choice.create(text: 'Experto en la detección precoz de enfermedades neurológicas en niños.', question: question15)
 choice5Q15 = Choice.create(text: 'Un agente de prensa audaz, número uno en el ranking de notas a celebridades', question: question15)
 choice6Q15 = Choice.create(text: 'Ninguna de las opciones.', question: question15) 
+
+
+#Create Outcomes
+outcome1Q1 = Outcome.create(career: veterinaria, choice: choice1Q1);
+outcome2Q1 = Outcome.create(career: agronomia, choice: choice1Q1);
+outcome1Q2 = Outcome.create(career: fisica, choice: choice1Q2);
+outcome2Q2 = Outcome.create(career: matematicas, choice: choice1Q2);
+outcome3Q2 = Outcome.create(career: quimica, choice: choice1Q2);
+outcome4Q2 = Outcome.create(career: computacion, choice: choice1Q2);
+outcome1Q3 = Outcome.create(career: literatura, choice: choice1Q3);
+outcome2Q3 = Outcome.create(career: historia, choice: choice1Q3);
+outcome1Q4 = Outcome.create(career: fisica, choice: choice1Q4);
+outcome1Q5 = Outcome.create(career: computacion, choice: choice1Q5);
+outcome1Q6 = Outcome.create(career: arte, choice: choice1Q6);
+outcome1Q7 = Outcome.create(career: historia, choice: choice1Q7);
+outcome1Q8 = Outcome.create(career: literatura, choice: choice1Q8);
+outcome2Q8 = Outcome.create(career: historia, choice: choice1Q8);
+outcome1Q9 = Outcome.create(career: economia, choice: choice1Q9);
+outcome1Q10 = Outcome.create(career: filosofia, choice: choice1Q10);
+outcome2Q10 = Outcome.create(career: historia, choice: choice1Q10);
+outcome1Q11 = Outcome.create(career: medicina, choice: choice1Q11);
+outcome1Q12 = Outcome.create(career: computacion, choice: choice1Q12);
+outcome2Q12 = Outcome.create(career: arquitectura, choice: choice1Q12);
+outcome1Q13 = Outcome.create(career: sociologia, choice: choice1Q13);
+outcome2Q13 = Outcome.create(career: historia, choice: choice2Q13);
+outcome3Q13 = Outcome.create(career: geologia, choice: choice3Q13);
+outcome1Q14 = Outcome.create(career: educacionFisica, choice: choice1Q14);
+outcome2Q14 = Outcome.create(career: filosofia, choice: choice2Q14);
+outcome3Q14 = Outcome.create(career: historia, choice: choice2Q14);
+outcome4Q14 = Outcome.create(career: veterinaria, choice: choice3Q14);
+outcome5Q14 = Outcome.create(career: computacion, choice: choice4Q14);
+outcome6Q14 = Outcome.create(career: economia, choice: choice5Q14);
+outcome1Q15 = Outcome.create(career: fisica, choice: choice1Q15);
+outcome2Q15 = Outcome.create(career: quimica, choice: choice1Q15);
+outcome3Q15 = Outcome.create(career: computacion, choice: choice1Q15);
+outcome4Q15 = Outcome.create(career: economia, choice: choice2Q15);
+outcome5Q15 = Outcome.create(career: educacionFisica, choice: choice3Q15);
+outcome6Q15 = Outcome.create(career: medicina, choice: choice4Q15);
+outcome7Q15 = Outcome.create(career: periodismo, choice: choice5Q15);
+
 
 #Create Surveys
 Survey.create(username: 'Nicolas', career: economia )
