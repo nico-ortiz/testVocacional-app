@@ -1,4 +1,4 @@
-   require './models/init.rb'
+require './models/init.rb'
 
 class App < Sinatra::Base
   get '/' do
@@ -9,7 +9,6 @@ class App < Sinatra::Base
   get '/Main' do
     erb :landing
   end
-
 
 
   post "/careers" do
@@ -29,11 +28,13 @@ class App < Sinatra::Base
     erb :careers_index
   end
 
+
   get "/careers/:id" do
     @career = Career.find(id: params[:id])
     erb :info_career_index 
   end
 
+  
   post "/posts" do
     request.body.rewind  # in case someone already read it
     data = JSON.parse request.body.read
@@ -45,31 +46,38 @@ class App < Sinatra::Base
     end
   end
 
+
   get '/posts' do
     p = Post.where(id: 1).last
     p.description
   end
 
-  get '/vocational-test' do
+  get '/vocational_test' do
     erb :test_index
   end
 
-  post '/surveys' do
+
+  post '/surveys' do    
     survey = Survey.new(username: params[:name])
+
+    if survey[:username]
+      [201, {}, 'Username vacio']   
+      redirect :careers
+    end
+
     if survey.save
       [201, { 'Location' => "surveys/#{survey.id}" }, 'User created sucesfully'] 
-      sleep(1)
-      redirect :Main
+      #sleep(4)
+      redirect :vocational_test
     else
-      [500, {}, 'Internal Server Error']
+      [504, {}, 'Internal server error']
     end
   end
+
 
   get "/surveys" do
     @surveys = Survey.all
     erb :info_survey_index 
   end
-  
-  
 end
 
