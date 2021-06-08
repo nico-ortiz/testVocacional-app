@@ -59,16 +59,10 @@ class App < Sinatra::Base
 
   post '/surveys' do    
     survey = Survey.new(username: params[:name])
-
-    if survey[:username]
-      [201, {}, 'Username vacio']   
-      redirect :careers
-    end
-
+    #Si el usuername es vacio se rompe
     if survey.save
       [201, { 'Location' => "surveys/#{survey.id}" }, 'User created sucesfully'] 
-      #sleep(4)
-      redirect :vocational_test
+      redirect :questions
     else
       [504, {}, 'Internal server error']
     end
@@ -78,6 +72,11 @@ class App < Sinatra::Base
   get "/surveys" do
     @surveys = Survey.all
     erb :info_survey_index 
+  end
+
+  get "/questions" do
+    @questions = Question.all
+    erb :questions_index
   end
 end
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vocational test</title>
+    </head>
+
+    <body>
+        <h1>Vocational test</h1>
+        
+        <form>
+            <ul>
+                <%@questions.each do |question|%>
+                    <li><%= question.description %></li>
+                    <td>
+                        <%question.choices.each do |choice|%>
+                            <input type="radio" value="<%choice.id%>"><%=choice.text%><br/>                    
+                        <%end%>
+                    </td>
+                <%end%>
+                <br>
+            </ul>
+            <button>
+                Enviar
+            </button>
+        </form>
+
+
+
+    </body>
+</html>
