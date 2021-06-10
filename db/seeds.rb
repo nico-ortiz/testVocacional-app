@@ -1,4 +1,5 @@
 #Clean Dataset
+Response.all.map{|response| response.destroy}
 Survey.all.map{|survey| survey.destroy}
 Outcome.all.map{|outcome| outcome.destroy}
 Career.all.map{|career| career.destroy}

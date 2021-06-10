@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>asda</title>
+    </head>
+
+    <body>
+        <h1>ffff</h1>
+        <li> <%@careers.each do |career|%></li>
+            <td>
+                <label>Careera: <%=Career.find(id: career.first).name%></label>
+                <li><label>Puntos: <%=career.last%></label></li>
+            </td>
+            <br/>
+            <%end%>
+    </body>
+</html>

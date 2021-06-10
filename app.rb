@@ -82,7 +82,24 @@ class App < Sinatra::Base
       response = Response.new(question_id: question, survey_id: survey.id, choice_id: params[:"#{question}"])
       response.save
     end
-    "Guardado"
+
+    careersPoints = {}
+    Career.all.each do |career| 
+      careersPoints[career.id] = 0
+    end
+    
+    survey.responses.each do |response|
+      Outcome.all.each do |outcome|
+        if (response.choice_id == outcome.choice_id)
+          careersPoints[outcome.career_id] += 1
+        end
+      end
+    end
+    
+    array = careersPoints.to_a
+    careersWithPoints = array.filter{|elem| elem.last > 0}
+    @careers = careersWithPoints.sort{|elem| elem.last}
+    erb :prueba
   end
 
 end
