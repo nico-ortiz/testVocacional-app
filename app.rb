@@ -96,9 +96,9 @@ class App < Sinatra::Base
       end
     end
     
-    array = careersPoints.to_a
-    careersWithPoints = array.filter{|elem| elem.last > 0}
-    @careers = careersWithPoints.sort{|elem| elem.last}
+    career_id = careersPoints.key(careersPoints.values().max())
+    @puntos_career = careersPoints.values().max()
+    @career = Career.find(id: career_id).name
     erb :prueba
   end
 

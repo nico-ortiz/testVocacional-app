@@ -6,12 +6,10 @@
 
     <body>
         <h1>ffff</h1>
-        <li> <%@careers.each do |career|%></li>
-            <td>
-                <label>Careera: <%=Career.find(id: career.first).name%></label>
-                <li><label>Puntos: <%=career.last%></label></li>
-            </td>
-            <br/>
-            <%end%>
+        <td>
+            <label>Careera: <%=@career%></label>
+            <li><label>Puntos: <%=@puntos_career%></label></li>
+        </td>
+        <br/>
     </body>
 </html>
