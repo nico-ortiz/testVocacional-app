@@ -58,11 +58,12 @@ class App < Sinatra::Base
 
 
   post '/surveys' do    
-    survey = Survey.new(username: params[:name])
+    @survey = Survey.new(username: params[:name])
     #Si el usuername es vacio se rompe
-    if survey.save
-      [201, { 'Location' => "surveys/#{survey.id}" }, 'User created sucesfully'] 
-      redirect :questions
+    if @survey.save
+      [201, { 'Location' => "surveys/#{@survey.id}" }, 'User created sucesfully'] 
+      @questions = Question.all
+      erb :questions_index
     else
       [504, {}, 'Internal server error']
     end
@@ -74,9 +75,15 @@ class App < Sinatra::Base
     erb :info_survey_index 
   end
 
-  get "/questions" do
-    @questions = Question.all
-    erb :questions_index
+  post "/responses" do
+    survey = Survey.find(id: params[:survey_id])
+    
+    params[:question_id].each do |question|
+      response = Response.new(question_id: question, survey_id: survey.id, choice_id: params[:"#{question}"])
+      response.save
+    end
+    "Guardado"
   end
+
 end
 

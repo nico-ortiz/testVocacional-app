@@ -6,25 +6,25 @@
 
     <body>
         <h1>Vocational test</h1>
-        
-        <form>
+        <form action='/responses' method='POST'>
+            <input type='hidden' name='survey_id' value='<%=@survey.id%>'>
+
             <ul>
                 <%@questions.each do |question|%>
-                    <li><%= question.description %></li>
+                    <li><%=question.description %></li>
+                    
                     <td>
                         <%question.choices.each do |choice|%>
-                            <input type="radio" value="<%choice.id%>"><%=choice.text%><br/>                    
+                            <input type='radio' name='<%=question.id%>' value='<%=choice.id%>'> <%=choice.text%> 
+                            <br/>
                         <%end%>
-                    </td>
+
+                        <input type='hidden' name='question_id[]' value='<%=question.id%>'>
+                    </td>   
+                
                 <%end%>
-                <br>
             </ul>
-            <button>
-                Enviar
-            </button>
+            <button type='submit'>Enviar</button>
         </form>
-
-
-
     </body>
 </html>
