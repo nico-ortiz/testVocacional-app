@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(73, 51, 51);
+}
+
+#header{
+    text-align: center;
+    background-image: url(images/signo.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+
+#header > a{
+    text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255), 1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
+    color: rgb(70, 55, 29);
+    font-family: 'Quicksand', sans-serif;
+    font-style: 'Italic';
+    font-size: 20px;
+}
+
+#result{
+    text-align: center;
+    margin-block: 15%;
+    color: white
+}
+
