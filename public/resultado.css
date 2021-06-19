@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(images/fondo.jpg);
+}
+
+#header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-image: url(images/signo.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+
+#header a{
+    font-size: 40px;
+    text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255), 1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
+    color: rgb(70, 55, 29);
+    font-family: 'Quicksand', sans-serif;
+    font-style: 'Italic';
+}
+
+#result{
+    margin-top: 120px;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-style: 'Italic';
+}
+
+.info{
+    text-align: center;
+}
+
+.info img{
+    width: 600px;
+    height: 312px;
+    display: block;
+    margin: auto;
+}
+.info p {
+    font-size: 85%;
+    font-family: 'Quicksand', sans-serif;
+    font-style: 'Italic';
+    color: white;
+}
+
+.info a {
+    font-size: 125%;
+    font-family: 'Quicksand', sans-serif;
+    font-style: 'Italic';
+    list-style: none;
+    color: white;
+}
+

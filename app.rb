@@ -31,6 +31,7 @@ class App < Sinatra::Base
 
   get "/careers/:id" do
     @career = Career.find(id: params[:id])
+    @careerid = @career.id
     erb :info_career_index 
   end
 
@@ -59,7 +60,6 @@ class App < Sinatra::Base
 
   post '/surveys' do    
     @survey = Survey.new(username: params[:name])
-    #Si el usuername es vacio se rompe
     if @survey.save
       [201, { 'Location' => "surveys/#{@survey.id}" }, 'User created sucesfully'] 
       @questions = Question.all
@@ -106,10 +106,12 @@ class App < Sinatra::Base
 
     @career = Career.find(id: career_id).name
     @pointsTotal = points
+    @careerid = career_id
     
     survey.update career_id: career_id
     erb :finish_template
   end
 
 end
+
 

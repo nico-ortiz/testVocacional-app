@@ -8,6 +8,9 @@
     </head>
 
     <body>
+        <header id="header">
+            <a href="/Main" title="Ir a página inicial" style="text-decoration:none">Main menu</a>
+        </header>
         <form class='form' action = '/careers' method = 'POST'>
             <label for= 'nombre carrera'>Enter career</label>
             <br/>
@@ -21,9 +24,6 @@
                 <% @careers.map do |career| %>
                 <li>
                     <a href = "careers/<%=career.id%>"> <%=career.name%> </a>
-                    <p>
-                        Total of surveys: <%= career.surveys.count.to_s %>
-                    </p>
                 </li>
                 <% end %>
             </ul>

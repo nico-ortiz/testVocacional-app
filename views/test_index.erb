@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <div>
+    <head>
         <title> Vocational test </title>
-    </div>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+        <link href = "username.css" rel = "stylesheet" type ="text/css">
+    </head>
+
+    
         <body>
+        <header id="header">
+            <a href="/Main" title="Ir a página inicial" style="text-decoration:none">Main menu</a>
+        </header>
+
         <h1>Vocational Test</h1>
+
+        
         
         <form action = '/surveys' method = 'POST'>
             <label for= 'name'>Enter your username</label>
             <br/>
-            <input type = 'text' name = 'name' placeholder = 'username'>
+            <input type = 'text' name = 'name' placeholder = 'username' required>
             <input type = 'submit' value = 'Next'>
         </form>
         </body>

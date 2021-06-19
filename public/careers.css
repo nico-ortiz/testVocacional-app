@@ -45,3 +45,21 @@ body{
 
     font-family: 'Quicksand', sans-serif;
 }
+
+#header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-image: url(images/signo.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+
+#header a{
+    font-size: 60px;
+    text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255), 1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
+    color: rgb(70, 55, 29);
+    font-family: 'Quicksand', sans-serif;
+    font-style: 'Italic';
+}
