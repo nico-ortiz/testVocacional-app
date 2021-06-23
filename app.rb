@@ -31,7 +31,7 @@ class App < Sinatra::Base
 
   get "/careers/:id" do
     @career = Career.find(id: params[:id])
-    @careerid = @career.id
+    @careername = @career.name
     erb :info_career_index 
   end
 
