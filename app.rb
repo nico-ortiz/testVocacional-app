@@ -82,32 +82,13 @@ class App < Sinatra::Base
       response = Response.new(question_id: question, survey_id: survey.id, choice_id: params[:"#{question}"])
       response.save
     end
-  
-    careersPoints = []
-    for career in Career.all 
-      careersPoints.push({"career" => career.id, "points" => 0})
-    end
-    
-    choicesUser = survey.responses.map{ |elem| elem.choice_id }
+ 
+    careerWithMaxPoints = survey.career_obtained(survey)
 
-    #Filtra las choices de Outcome, tal que estas choices son de las responses del user
-    choices = Outcome.all.filter{ |elem| choicesUser.include? elem.choice_id}
-
-    for c in choices
-      idx = careersPoints.index{ |elem| elem["career"] == c.career_id}
-      if(idx)
-        careersPoints[idx]["points"] += 1
-      end
-    end
-
-    careerWithMaxPoints = careersPoints.max_by{ |elem| elem["points"]}
     career_id = careerWithMaxPoints["career"]
-    points = careerWithMaxPoints["points"]
-
     @career = Career.find(id: career_id).name
-    @pointsTotal = points
-    @careerid = career_id
-    
+    @pointsTotal = careerWithMaxPoints["points"]
+        
     survey.update career_id: career_id
     erb :finish_template
   end
