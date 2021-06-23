@@ -11,14 +11,7 @@
         <header id="header">
             <a href="/Main" title="Ir a página inicial" style="text-decoration:none">Main menu</a>
         </header>
-        <form class='form' action = '/careers' method = 'POST'>
-            <label for= 'nombre carrera'>Enter career</label>
-            <br/>
-            <div class= 'input'>
-                <input class='text' type = 'text' name = 'name' placeholder = 'Enter your career'>
-                <input class='button' type = 'submit' value = 'Next'>
-            </div>    
-            </form>
+        
         <div class='careerslist'>    
             <ul>
                 <% @careers.map do |career| %>

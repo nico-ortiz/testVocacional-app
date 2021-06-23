@@ -11,18 +11,6 @@ class App < Sinatra::Base
   end
 
 
-  post "/careers" do
-    career = Career.new(name: params[:name])
-
-    if career.save
-      [201, { 'Location' => "careers/#{career.id}" }, 'CREATED']
-      redirect :careers
-    else
-      [500, {}, 'Internal Server Error']
-    end
-  end
-
-
   get "/careers" do
     @careers = Career.all
     erb :careers_index
@@ -54,7 +42,7 @@ class App < Sinatra::Base
   end
 
   get '/vocational_test' do
-    erb :test_index
+    erb :user_load
   end
 
 
