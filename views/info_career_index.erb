@@ -2,18 +2,19 @@
 <html>
     <head>
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
-        <link href = "careersinfo.css" rel = "stylesheet" type ="text/css">
-        <title><%= @career.name%> </title>
+-       <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="careersinfo.css" type="text/css">
+        <title><%=@career%></title>
     </head>
 
     <body>
         <header id="header">
             <a href="/Main" title="Ir a página inicial" style="text-decoration:none">Main menu</a>
+            <a href="/careers" title="Ir a página inicial" style="text-decoration:none">Carreras menu</a>
         </header>
-        <h1><%= @career.name%></h1>
+        <h1><%= @career%></h1>
     <div class="info">
-    <% case @careername
+    <% case @career
         when "Economia"%>
             <img src="https://laopinion.de/wp-content/uploads/2019/02/Ishbel-Flores-002-820x394.jpg">
             <p>El Licenciado en Economía es un profesional comprometido éticamente con la comunidad en la que está inmerso contando con una sólida formación teórica, analítica y experimental, lo que le permite la medición, modelización y comprensión de los fenómenos económicos y sociales. Acciones que desarrollará desde una perspectiva crítica, considerando el impacto social, ambiental y económico que potencialmente tiene su desempeño profesional.</p>
@@ -24,7 +25,7 @@
             <br>
             <br>
             El Ingeniero Agrónomo integra sus conocimientos para la mejora de los sistemas de producción agropecuaria y forestal, contribuye al aprovechamiento y conservación de los recursos filogenéticos, así como la organización de productores mediante recursos administrativos que posibiliten la autogestión hacia un desarrollo rural sustentable.</p>
-            <a href="https://www.unrc.edu.ar/unrc/carreras/ayv_ingenieria_agronomica.htm"target= "_blank"> Mas info </a>
+            <a href="https://www.unrc.edu.ar/unrc/carreras/ayv_ingenieria_agronomica.htm"target= "_blank"> Mas info </a>-->
         <%when "Arquitectura"%>
             <img src="https://encolombia.com/wp-content/uploads/2012/12/Carrera-Arquitectura-Educacion.jpg"> 
             <p>La Carrera de Arquitectura adopta como punto de partida el Perfil establecido por la normativa nacional, que define las competencias de base que deben poseer ineludiblemente los egresados al finalizar su paso por la carrera de grado.</p>

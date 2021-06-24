@@ -9,7 +9,7 @@ class App < Sinatra::Base
   get '/Main' do
     erb :landing
   end
-
+  
 
   get "/careers" do
     @careers = Career.all
@@ -17,9 +17,8 @@ class App < Sinatra::Base
   end
 
 
-  get "/careers/:id" do
-    @career = Career.find(id: params[:id])
-    @careername = @career.name
+  get "/career" do
+    @career = params[:career_name]
     erb :info_career_index 
   end
 

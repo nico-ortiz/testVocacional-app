@@ -14,9 +14,12 @@
         
         <div class='careerslist'>    
             <ul>
-                <% @careers.map do |career| %>
-                <li>
-                    <a href = "careers/<%=career.id%>"> <%=career.name%> </a>
+                <% @careers.each do |career| %>
+                <li>   
+                    <form action="/career" method="GET">
+                        <input type="hidden" name="career_name" value="<%=career.name%>">
+                        <button><%=career.name%></button>
+                    </form>
                 </li>
                 <% end %>
             </ul>
