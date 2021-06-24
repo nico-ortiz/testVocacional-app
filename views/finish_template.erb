@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://kit.fontawesome.com/d1b528746c.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">      
         <link href = "resultado.css" rel = "stylesheet" type ="text/css">
@@ -8,16 +9,14 @@
     </head>
 
     <body>
-        <header id="header">
-            <a href="/Main" title="Ir a página inicial" style="text-decoration:none">Menu principal</a>
-        </header>
+        <div class="navegador">
+            <ul>
+                <li><a href="Main" style="text-decoration:none"><i class="fas fa-home"></i> Menu principal</a></li>
+                <li><a href="careers" style="text-decoration:none"><i class="fas fa-clipboard-list"></i>  Menu carreras</a></li>
+            </ul>
+        </div>
         <div id="result">
             <h1>Carrera Obtenida</h1>
-            <td>
-                <label>Carrera: <%=@career%></label>
-                <li><label>Puntos: <%=@pointsTotal%></label></li>
-                
-            </td>
         </div> 
         <div class="info">
             <% sites = {
@@ -40,11 +39,16 @@
                 "Veterinaria" => {"img" =>"https://cdn.euroinnova.edu.es/img/subidasEditor/fotolia_39639815_subscription_monthly_m-1611921719.webp" , "text" =>"El Veterinario es un profesional universitario con una formación de carácter generalista, humanista, crítico y reflexivo apto para comprender y traducir las necesidades de individuos, grupos sociales y comunidades con relación a las actividades inherentes al ejercicio profesional.", "page" =>"https://www.unrc.edu.ar/unrc/carreras/ayv_medicina_veterinaria.htm"}
             }%>
 
-            <h1><%=@career%></h1>
+            <h2><%=@career%></h2>
             <img src=<%=sites[@career]["img"]%>>
             <p> <%=sites[@career]["text"]%> </p>
             <a href=<%=sites[@career]["page"]%> target="_blank"> Mas info</a>
         </div>
         <br/>
+        <footer>
+                <div><h4>Test vocacional office, Avenida Siempreviva 742, Springfield, Estados Unidos. </h4>
+
+                <p>Copyright 2021 test vocacional | Todos los derechos reservados. </p> </div>
+        </footer>
     </body>
 </html>

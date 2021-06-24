@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://kit.fontawesome.com/d1b528746c.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
 -       <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="careersinfo.css" type="text/css">
@@ -8,11 +9,13 @@
     </head>
 
     <body>
-        <header id="header">
-            <a href="/Main" title="Ir a página inicial" style="text-decoration:none">Menu principal</a>
-            <a href="/careers" title="Ir a página inicial" style="text-decoration:none">Menu carreras</a>
-        </header>
-
+    
+    <div class="navegador">
+            <ul>
+                <li><a href="Main" style="text-decoration:none"><i class="fas fa-home"></i> Menu principal</a></li>
+                <li><a href="careers" style="text-decoration:none"><i class="fas fa-clipboard-list"></i>  Menu carreras</a></li>
+            </ul>
+    </div>
         <div class="info">
             <% sites = {
                 "Economia" => {"img" => "https://laopinion.de/wp-content/uploads/2019/02/Ishbel-Flores-002-820x394.jpg", "text" => "El Licenciado en Economía es un profesional comprometido éticamente con la comunidad en la que está inmerso contando con una sólida formación teórica, analítica y experimental, lo que le permite la medición, modelización y comprensión de los fenómenos económicos y sociales. Acciones que desarrollará desde una perspectiva crítica, considerando el impacto social, ambiental y económico que potencialmente tiene su desempeño profesional." ,"page" => "https://www.eco.unrc.edu.ar/seccion/grado/plan-estudios-le/"},
@@ -39,5 +42,10 @@
             <p> <%=sites[@career]["text"]%> </p>
             <a href=<%=sites[@career]["page"]%> target="_blank"> Mas info</a>
         </div>
+        <footer>
+                <div><h4>Test vocacional office, Avenida Siempreviva 742, Springfield, Estados Unidos. </h4>
+
+                <p>Copyright 2021 test vocacional | Todos los derechos reservados. </p> </div>
+        </footer>
     </body>
 </html>
