@@ -1,31 +1,20 @@
 body{
+    font-family: 'Quicksand', sans-serif;
+    font-style: 'Italic';
+    text-align: center;
     margin: 0;
     padding: 0;
     background-image: url(images/fondo.jpg);
 }
 
-#header{
-    position: center;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    background-image: url(images/signo.jpg);
-    background-position: center;
-    background-size: 100%;
-}
 
-#header a{
-    font-size: 40px;
-    text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255), 1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
-    color: rgb(70, 55, 29);
-    font-family: 'Quicksand', sans-serif;
-    font-style: 'Italic';
+.info h1{
+    color: wheat;
 }
 
 .info p {
+    color: wheat;
     margin-top: 70px;
-    font-family: 'Quicksand', sans-serif;
-    font-style: 'Italic';
 }
 
 .navegador ul{
@@ -42,7 +31,6 @@ body{
  .navegador li a {
     border-radius: 20px;
     margin: 40px;
-    font-family: 'Quicksand', sans-serif;
     text-align: center;
     padding: 2px 7px 2px 7px;
     color: rgb(4, 4, 4);
@@ -59,7 +47,6 @@ body{
 
  footer {
     color: white;
-    font-family: 'Quicksand', sans-serif;
     text-align: center;
     position:relative;
     padding-top: 16px;
@@ -77,3 +64,27 @@ body{
  footer p{
      font-size: 10px;
  }
+
+.info{
+    margin-bottom: 10px;
+ }
+
+ .info img{
+    width: 600px;
+    height: 312px;
+    display: block;
+    margin: auto;
+}
+
+.info a{
+    padding: 2px;
+    text-decoration: none;
+    border-radius: 15px;
+    color:rgb(255, 255, 255);
+}
+
+.info a:hover{
+    border-radius: 15px;
+    background-color:rgb(239, 185, 77);
+    color:rgb(0, 0, 0);
+}

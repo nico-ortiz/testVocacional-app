@@ -3,32 +3,12 @@ body{
     background-size: cover;
     font-family: 'Quicksand', sans-serif;
     font-style: 'Italic';
-    color: white;
     text-align: center;
     padding: 0;
     margin: 0;
     background-image: url(images/fondo.jpg);
 }
 
-#header{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    background-image: url(images/signo.jpg);
-    background-position: center;
-    background-size: 100%;
-}
-
-#header{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    background-image: url(images/signo.jpg);
-    background-position: center;
-    background-size: 100%;
-}
 
 #header a{
     font-size: 40px;
@@ -42,28 +22,30 @@ h1{
     font-size: 80px;
     margin-top: 80px;
     text-align: center;
-    color: white;
+    color: wheat;
     animation: bounce 3s ;
 }
 
 li{
+    color: wheat;
     font-size: 20px;
     animation: bounceInLeft 1s ;
 }
 
 .botones{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     margin: 20px;
     justify-content: center;
     display: flex;
     flex-wrap: nowrap;
+    font-size: 15px;
 }
 
 
 button{
     font-family: 'Quicksand', sans-serif;
     font-style: 'Italic';
-    color: rgb(255, 255, 255);
+    color: wheat;
     background-image: url(images/fondo.jpg);
     border-color: rgb(35, 19, 19);
     border-radius: 20px;
