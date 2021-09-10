@@ -18,9 +18,12 @@ h1{
 
 }
 
+form{
+    position: relative;
+    background-color: yellow;
+}
+
 .careerslist{
-    position: absolute;
-    top: 130px;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
 }
