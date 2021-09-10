@@ -22,6 +22,11 @@ class App < Sinatra::Base
     erb :info_career_index 
   end
 
+
+  get "/search-career" do
+    @career = params[:career_name]
+    erb :info_career_index
+  end
   
   post "/posts" do
     request.body.rewind  # in case someone already read it
