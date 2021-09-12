@@ -1,17 +1,16 @@
 body{
     background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Quicksand', sans-serif;
+    font-family: Tlwg Typist;
     font-style: 'Italic';
     text-align: center;
     padding: 0;
     margin: 0;
-    background-image: url(images/fondo.jpg);
+    background-color:  wheat;
 }
 
 
 #header a{
-    font-size: 40px;
+    font-size: 15px;
     text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255), 1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
     color: rgb(70, 55, 29);
     font-family: 'Quicksand', sans-serif;
@@ -22,18 +21,19 @@ h1{
     font-size: 80px;
     margin-top: 80px;
     text-align: center;
-    color: wheat;
+    color: black;
     animation: bounce 3s ;
 }
 
 li{
-    color: wheat;
-    font-size: 20px;
+    color: black;
+    font-size: 15px;
     animation: bounceInLeft 1s ;
+    font-family: sans-serif;
 }
 
 .botones{
-    color: rgb(255, 255, 255);
+    color: black;
     margin: 20px;
     justify-content: center;
     display: flex;
@@ -46,13 +46,18 @@ button{
     font-family: 'Quicksand', sans-serif;
     font-style: 'Italic';
     color: wheat;
-    background-image: url(images/fondo.jpg);
+    background-color: black;
     border-color: rgb(35, 19, 19);
     border-radius: 20px;
     padding: 10px;
     font-size: 20px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
+.button a{
+    color:  black;
+}
+
 
 .navegador ul{
     color: white;

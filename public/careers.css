@@ -3,18 +3,18 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    background-image: url(images/fondo.jpg);
+    background-image: url(images/fondo2.jpg);
 }
 
 h1{
     position: relative;
-    bottom: 20px;
-    text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255), 1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
-    color: rgb(70, 55, 29);
-    font-family: 'Quicksand', sans-serif;
-    font-style: 'Italic';
+    text-shadow: -1px 0 rgb(245, 222, 179), 0 1px rgb(245, 222, 179), 1px 0 rgb(245, 222, 179), 0 -1px rgb(245, 222, 179);
+    color: rgb(0, 0, 0);
+    font-family: Tlwg Typist;
     font-size: 70px;
     text-align: center;
+    
+
 
 }
 
@@ -46,17 +46,19 @@ h1{
 
 .careerslist ul li form button{
     color: rgb(255, 255, 255);
-    background-color:rgb(70, 55, 29);
+    background-color:#1E1E1C;
     border-radius: 20px;
+    border-style: solid;
+    border-color: white;
     padding: 10px;
 }
 
 
 
 .careerslist ul li form button:hover{
-    background-color:rgb(255, 255, 255);
-    color:rgb(70, 55, 29);
-    border-color: rgb(70, 55, 29);
+    background-color:wheat;
+    color:black;
+    border-color: black;
     border-radius: 20px;
 }
 

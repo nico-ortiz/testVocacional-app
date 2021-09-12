@@ -1,11 +1,12 @@
 body{
-    background-image: url(images/fondo.jpg);
-    font-family: 'Quicksand', sans-serif;
+    background-image: url(images/fondo2.jpg);
+    background-size: 100%;
+    font-family: Tlwg Typist;
     font-style: 'Italic';
     margin: 0;
     padding: 0;
     text-align: center;
-    color: white;
+    color: #30302D ;
 }
 
 #header{
@@ -13,7 +14,7 @@ body{
     top: 0;
     width: 100%;
     text-align: center;
-    background-image: url(images/signo.jpg);
+    background-image: url(images/fondoPrueba2.jpg);
     background-position: center;
     background-size: 100%;
 }
@@ -31,13 +32,47 @@ h1{
     font-size: 70px;
 }
 
+.button{
+  display: inline-block;
+  border-radius: 4px;
+  background-color:  #FFE97B; 
+  border: none;
+  color: #000000;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+}
+
+ .button a {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button a:after {
+  content: '\00bb';  
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover a {
+  padding-right: 25px;
+}
+.button:hover a:after {
+  opacity: 1;
+  right: 0;
+}
+
+
 
 label{
     font-size: 20px;
 }
 
 .navegador ul{
-    color: white;
+    color: black;
     text-align:center;
  } 
 
