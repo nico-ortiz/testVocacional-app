@@ -36,6 +36,12 @@
                 "Sociologia" => {"img" =>"https://www.buscouniversidad.com.ar/orientacion/wp-content/uploads/2016/02/carrera-de-sociolog%C3%ADa.jpg" , "text" =>"La Carrera de Sociología ha tenido históricamente el privilegio de albergar identidades académicas y políticas plurales. En el marco de esa diversidad, se produjeron notorios aportes al conocimiento científico del mundo social, junto a la formación de generaciones de sociólogas y sociólogos. Todo ello forjado al calor del pensamiento crítico, el debate, la reflexión profunda y la intervención en articulación con actores sociales, practicando siempre una mirada atenta a los devenires de las coyunturas locales, regionales y globales. La carrera aporta a una Facultad donde se despliega una formación de calidad y se practica la investigación en estrecha articulación con la docencia, con la extensión y con la transferencia, con el compromiso político de aportar a un proyecto de Universidad pública, gratuita, masiva y de calidad, democrática, autogestionada y vinculada de manera indisoluble con los intereses de las mayorías.", "page" =>"http://www.sociales.uba.ar/carreras/sociologia/"},
                 "Veterinaria" => {"img" =>"https://cdn.euroinnova.edu.es/img/subidasEditor/fotolia_39639815_subscription_monthly_m-1611921719.webp" , "text" =>"El Veterinario es un profesional universitario con una formación de carácter generalista, humanista, crítico y reflexivo apto para comprender y traducir las necesidades de individuos, grupos sociales y comunidades con relación a las actividades inherentes al ejercicio profesional.", "page" =>"https://www.unrc.edu.ar/unrc/carreras/ayv_medicina_veterinaria.htm"}
             }%>
+
+            <h1><%=@career%></h1>
+            <b><img src=<%=sites[@career]["img"]%>></b>
+            <p> <%=sites[@career]["text"]%> </p>
+            <a href=<%=sites[@career]["page"]%> target="_blank"> Mas info</a>
+
             <%if Career.find(name: @career) == nil%>
                 <h1>Carrera no encontrada.</h1>
             <%else%>
@@ -44,6 +50,7 @@
                 <p> <%=sites[@career]["text"]%> </p>
                 <a href=<%=sites[@career]["page"]%> target="_blank"> Mas info</a>
             <%end%>
+
         </div>
         <footer>
                 <div><h4>Test vocacional office, Avenida Siempreviva 742, Springfield, Estados Unidos. </h4>

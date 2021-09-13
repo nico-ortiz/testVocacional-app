@@ -3,18 +3,20 @@ body{
     font-style: 'Italic';
     margin: 0;
     padding: 0;
-    background-image: url(images/fondo.jpg);
+    background-image: url(images/fondo2.jpg);
 }
 
 .info h2{
-    color: wheat;
+    color: black;
+    font-family: Tlwg Typist;
 }
 
 #result{
     margin-top: 50px;
     text-align: center;
-    color: white;
+    color: black;
     margin-bottom: 20px;
+    font-family: Tlwg Typist;
 }
 
 .info{
@@ -27,19 +29,35 @@ body{
     display: block;
     margin: auto;
 }
+.info b{
+    width: 600px;
+    height: 312px;
+    padding: 5px;;
+    display: block;
+    margin: auto;
+    background-color: black;
+ }
+
+
+
 .info p {
-    font-size: 15px;
+    font-size: 17px;
     font-family: 'Quicksand', sans-serif;
     font-style: 'Italic';
-    color: wheat;
+    color: black;
 }
 
 .info a {
-    font-size: 125%;
     font-family: 'Quicksand', sans-serif;
     font-style: 'Italic';
-    list-style: none;
-    color: white;
+    color: wheat;
+    background-color: black;
+    border-color: rgb(35, 19, 19);
+    border-radius: 25px;
+    padding: 15px;
+    font-size: 20px;
+    margin-bottom: 25px;
+    cursor: pointer;
 }
 
 .navegador ul{

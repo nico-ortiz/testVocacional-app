@@ -4,16 +4,16 @@ body{
     text-align: center;
     margin: 0;
     padding: 0;
-    background-image: url(images/fondo.jpg);
+    background-image: url(images/fondo2.jpg);
 }
 
 
 .info h1{
-    color: wheat;
+    color: black;
 }
 
 .info p {
-    color: wheat;
+    color: black;
     margin-top: 70px;
 }
 
@@ -76,12 +76,27 @@ body{
     display: block;
     margin: auto;
 }
+.info b{
+    width: 600px;
+    height: 312px;
+    padding: 5px;;
+    display: block;
+    margin: auto;
+    background-color: black;
+ }
+
 
 .info a{
-    padding: 2px;
-    text-decoration: none;
+     font-family: 'Quicksand', sans-serif;
+    font-style: 'Italic';
+    color: wheat;
+    background-color: black;
+    border-color: rgb(35, 19, 19);
     border-radius: 15px;
-    color:rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .info a:hover{
