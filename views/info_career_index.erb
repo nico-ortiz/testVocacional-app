@@ -37,11 +37,7 @@
                 "Veterinaria" => {"img" =>"https://cdn.euroinnova.edu.es/img/subidasEditor/fotolia_39639815_subscription_monthly_m-1611921719.webp" , "text" =>"El Veterinario es un profesional universitario con una formación de carácter generalista, humanista, crítico y reflexivo apto para comprender y traducir las necesidades de individuos, grupos sociales y comunidades con relación a las actividades inherentes al ejercicio profesional.", "page" =>"https://www.unrc.edu.ar/unrc/carreras/ayv_medicina_veterinaria.htm"}
             }%>
 
-            <h1><%=@career%></h1>
-            <b><img src=<%=sites[@career]["img"]%>></b>
-            <p> <%=sites[@career]["text"]%> </p>
-            <a href=<%=sites[@career]["page"]%> target="_blank"> Mas info</a>
-
+           
             <%if Career.find(name: @career) == nil%>
                 <h1>Carrera no encontrada.</h1>
             <%else%>
