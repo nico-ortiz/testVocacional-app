@@ -41,6 +41,16 @@
             <b><img src=<%=sites[@career]["img"]%>></b>
             <p> <%=sites[@career]["text"]%> </p>
             <a href=<%=sites[@career]["page"]%> target="_blank"> Mas info</a>
+
+            <%if Career.find(name: @career) == nil%>
+                <h1>Carrera no encontrada.</h1>
+            <%else%>
+                <h1><%=@career%></h1>
+                <img src=<%=sites[@career]["img"]%>>
+                <p> <%=sites[@career]["text"]%> </p>
+                <a href=<%=sites[@career]["page"]%> target="_blank"> Mas info</a>
+            <%end%>
+
         </div>
         <footer>
                 <div><h4>Test vocacional office, Avenida Siempreviva 742, Springfield, Estados Unidos. </h4>
