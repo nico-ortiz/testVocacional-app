@@ -85,13 +85,13 @@ form .input-placeholder{
     text-align:center;
  } 
 
- .navegador ul li{
+.navegador ul li{
     display: inline;
     text-align: center;
     margin: 0 10px 0 0;
- } 
+} 
 
- .navegador li a {
+.navegador li a {
     border-radius: 20px;
     margin: 40px;
     font-family: 'Quicksand', sans-serif;
@@ -101,32 +101,62 @@ form .input-placeholder{
     background-color:rgb(240, 204, 131);
     border: 1px solid rgb(255, 255, 255);
     text-decoration: none;
- } 
+} 
 
- .navegador li a:hover{
+.navegador li a:hover{
         border-color: rgb(70, 55, 29);
         background-color:rgb(255, 255, 255);
         color:rgb(70, 55, 29);
- }
+}
 
 
- footer {
+footer {
+    position:relative;
     color: white;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
     display: flex;
     justify-content: center;
-    bottom: 0;
-    height:100px;
+    top: 62px;
+    margin-left: -8px;
+    margin-right: -8px;
+    height: 150px;
     background-color: #000000;
-    margin: auto;
- }
-
- footer h4{
-    font-size: 15px;
+    padding: 0px ;
 }
 
- footer p{
-     font-size: 10px;
- }
 
+footer h3{
+     position: relative;
+     bottom: 10px;
+     left: 300px;
+}
+
+footer h4{
+    left:200px;
+    position: relative;
+    font-size: 15px;
+
+}
+
+footer h5{
+    text-align: justify;
+    position: relative;
+    left: 100px;
+}
+
+
+footer p{
+    position: relative;
+    left:200px;
+    font-size: 10px;
+}
+
+footer img{
+    position: relative;
+    right: 70px;
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    margin-right: -200px;
+}
