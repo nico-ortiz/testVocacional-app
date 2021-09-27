@@ -22,7 +22,7 @@
 
             <ul>
                 <%@questions.each do |question|%>
-                    <li><%=question.description %></li>
+                    <li class="preg"><%=question.description %></li>
                     <div class="botones">
                     <td>
                         <%question.choices.each do |choice|%>
@@ -38,9 +38,25 @@
             <button type='submit'>Enviar</button>
         </form>
         <footer>
-                <div><h4>Test vocacional office, Avenida Siempreviva 742, Springfield, Estados Unidos. </h4>
+                <img src="images/logoUNRC.ico">
+
+                <div class="rights"><h4>Test vocacional office, Avenida Siempreviva 742, Springfield, Estados Unidos. </h4>
 
                 <p>&copy Copyright 2021 test vocacional | Todos los derechos reservados. </p> </div>
+
+                <h3>Contactos:</h3>
+                    <h5><ul class="mails">
+                            <li> 
+                            Nicolas Ortiz:  nicortiz1234@gmail.com
+                            </li>
+                            <li>  
+                            Joaquin Moran:  joacomoran6@gmail.com
+                            </li>
+                            <li>  
+                            Agustin Giungi: agustingiungi98@gmail.com
+                            </li>
+                        </ul> 
+                    </h5>                                    
         </footer>
     </body>
 </html>

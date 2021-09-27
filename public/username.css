@@ -101,21 +101,52 @@ label{
  }
 
  footer {
-    color: white;
-    font-family: 'Quicksand', sans-serif;
-    text-align: center;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height:100px;
-    background-color: #000000;
- }
-
- footer h4{
-    font-size: 15px;
+  position:relative;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  top: 62px;
+  margin-left: -8px;
+  margin-right: -8px;
+  height: 150px;
+  background-color: #000000;
+  padding: 0px ;
 }
 
- footer p{
-     font-size: 10px;
- }
+
+footer h3{
+   position: relative;
+   bottom: 10px;
+   left: 300px;
+}
+
+footer h4{
+  left:200px;
+  position: relative;
+  font-size: 15px;
+
+}
+
+footer h5{
+  text-align: justify;
+  position: relative;
+  left: 100px;
+}
+
+
+footer p{
+  position: relative;
+  left:200px;
+  font-size: 10px;
+}
+
+footer img{
+  position: relative;
+  right: 70px;
+  width: 200px;
+  height: 200px;
+  bottom: 50px;
+  margin-right: -200px;
+}
