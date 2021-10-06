@@ -5,4 +5,4 @@ require_relative 'survey'
 require_relative 'response'
 require_relative 'choice'
 require_relative 'outcome'
-
+require_relative 'finished_survey'
