@@ -16,7 +16,7 @@
             </ul>
         </div>
         <div class="eleccion_carrera">
-             <form class="eleccion_carrera" action="career-query" method="GET">
+             <form class="eleccion_carrera" action="finished_survey" method="GET">
                 <label for="carrera"><p>Carrera a consultar:</p></label><br>
                 <input placeholder="Elige la carrera a consultar" list="carreras" name="carrera" id="carrera" autocomplete="off" >
                 <datalist id="carreras">
@@ -25,11 +25,11 @@
                     <%end%>
                 </datalist>
                 <p>Desde:</p>
-                <input type="date" id="start-date" name="start-date"
+                <input type="date" id="start_date" name="start_date"
                     value="2021-01-01"
                     min="2021-01-01" max="2021-12-31">
                 <p>Hasta:</p>
-                <input type="date" id="finish-date" name="finish-date"
+                <input type="date" id="finish_date" name="finish_date"
                     value="2021-12-31"
                     min="2021-01-01" max="2021-12-31>">
                 <ul>
