@@ -27,7 +27,13 @@ class App < Sinatra::Base
     @career = params[:career_name]
     erb :info_career_index
   end
+
+  get "/career-query" do
+    @careers = Career.all
+    erb :career_query
+  end
   
+
   post "/posts" do
     request.body.rewind  # in case someone already read it
     data = JSON.parse request.body.read
