@@ -84,13 +84,24 @@ class App < Sinatra::Base
     careerWithMaxPoints = survey.career_obtained(survey)
 
     career_id = careerWithMaxPoints["career"]
+    Finished_Survey.create(career_id: career_id)
     @career = Career.find(id: career_id).name
     @pointsTotal = careerWithMaxPoints["points"]
         
     survey.update career_id: career_id
     erb :finish_template
   end
+  
+  get "/finished_survey" do
+
+    @carrera = params[:carrera]
+    @start_date = params[:start_date]
+    @finish_date = params[:finish_date]
+
+    career = Career.find(name: @carrera).id
+    @count = Finished_Survey.all.filter{|x| x.career_id == career && x.created_at.strftime("%Y-%m-%d") >= @start_date && x.created_at.strftime("%Y-%m-%d") <= @finish_date}.count
+    erb :result_career_query
+  end
 
 end
-
 
