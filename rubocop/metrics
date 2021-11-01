@@ -1,0 +1,25 @@
+Inspecting 42 files
+..........C......................C.C..CC..
+
+Offenses:
+
+db/migrations/000017_alter_tables_id_and_fk.rb:1:1: C: Metrics/BlockLength: Block has too many lines. [26/25]
+Sequel.migration do  ...
+^^^^^^^^^^^^^^^^^^^^
+models/survey.rb:12:5: C: Metrics/AbcSize: Assignment Branch Condition size for career_obtained is too high. [<14, 17, 7> 23.11/17]
+    def career_obtained (survey) ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+models/survey.rb:12:5: C: Metrics/MethodLength: Method has too many lines. [13/10]
+    def career_obtained (survey) ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/models/choices_test.rb:39:3: C: Metrics/AbcSize: Assignment Branch Condition size for test_choice_has_many_response is too high. [<6, 19, 0> 19.92/17]
+  def test_choice_has_many_response ...
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/models/questions_test.rb:57:5: C: Metrics/AbcSize: Assignment Branch Condition size for test_has_many_responses is too high. [<6, 19, 0> 19.92/17]
+    def test_has_many_responses ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/models/responses_test.rb:39:5: C: Metrics/AbcSize: Assignment Branch Condition size for test_response_has_choice_survey_and_question is too high. [<8, 19, 1> 20.64/17]
+    def test_response_has_choice_survey_and_question ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+42 files inspected, 6 offenses detected
