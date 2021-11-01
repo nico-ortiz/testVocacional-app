@@ -1,7 +1,9 @@
-require File.expand_path '../../test_helper.rb', __FILE__
+# frozen_string_literal: true
 
-class SurveyTest < MiniTest::Unit::TestCase
-  MiniTest::Unit::TestCase
+require File.expand_path '../test_helper.rb', __dir__
+
+class SurveyTest < MiniTest::Unit::TestCase # rubocop:todo Style/Documentation
+  MiniTest::Unit::TestCase # rubocop:todo Lint/Void
 
   def test_survey_must_has_username
     # Arrange
@@ -9,29 +11,29 @@ class SurveyTest < MiniTest::Unit::TestCase
     # Act
     survey.username = ''
     # Assert
-    assert_equal survey.valid?, false 
+    assert_equal survey.valid?, false
   end
 
   def test_survey_has_a_career
     # Arrange
-    career = Career.create(name:'Agrimensor')
-    survey1 = Survey.create(username:'Nico Ortiz', career_id: career.id)
-    survey2 = Survey.create(username:'Joaco Moran', career_id: career.id)
+    career = Career.create(name: 'Agrimensor')
+    survey1 = Survey.create(username: 'Nico Ortiz', career_id: career.id)
+    survey2 = Survey.create(username: 'Joaco Moran', career_id: career.id)
     # Act
-    
+
     # Assert
-    assert_equal(survey1.career.id,survey2.career.id)
+    assert_equal(survey1.career.id, survey2.career.id)
   end
 
   def test_survey_has_diff_career
     # Arrange
-    career1 = Career.create(name:'Agrimensor')
-    career2 = Career.create(name:'Peon de estancia')
-    survey1 = Survey.create(username:'Nico Ortiz', career_id: career1.id)
-    survey2 = Survey.create(username:'Joaco Moran', career_id: career2.id)
+    career1 = Career.create(name: 'Agrimensor')
+    career2 = Career.create(name: 'Peon de estancia')
+    survey1 = Survey.create(username: 'Nico Ortiz', career_id: career1.id)
+    survey2 = Survey.create(username: 'Joaco Moran', career_id: career2.id)
     # Act
-    
+
     # Assert
-    assert_equal(false,survey1.career.id==survey2.career.id)
+    assert_equal(false, survey1.career.id == survey2.career.id)
   end
 end

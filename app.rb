@@ -79,7 +79,9 @@ class App < Sinatra::Base
     @finish_date = params[:finish_date]
 
     career = Career.find(name: @carrera).id
-    @count = Finished_Survey.all.filter{|x| x.career_id == career && x.created_at.strftime("%Y-%m-%d") >= @start_date && x.created_at.strftime("%Y-%m-%d") <= @finish_date}.count
+    @count = Finished_Survey.all.filter do |x|
+      x.career_id == career && x.created_at.strftime("%Y-%m-%d") >= @start_date && x.created_at.strftime("%Y-%m-%d") <= @finish_date
+    end.count
     erb :result_career_query
   end
 

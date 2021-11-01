@@ -1,18 +1,15 @@
+# frozen_string_literal: true
+
 Sequel.migration do
-    up do
-        alter_table(:questions)do
-            add_column :type, String
-        end
-    end
+  up do
+      alter_table(:questions) do # rubocop:todo Layout/IndentationWidth
+          add_column :type, String # rubocop:todo Layout/IndentationWidth
+      end
+  end
 
-    down do
-        alter_table(:questions)do
-            drop_column :type
-        end
+  down do
+    alter_table(:questions) do
+        drop_column :type # rubocop:todo Layout/IndentationWidth
     end
+  end
 end
-
-
-
- 
-  

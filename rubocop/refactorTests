@@ -1,0 +1,762 @@
+Inspecting 8 files
+WWWWWWWC
+
+Offenses:
+
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+ require File.expand_path '../../test_helper.rb', __FILE__
+^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:1:2: C: [Correctable] Layout/InitialIndentation: Indentation of first line in file detected.
+ require File.expand_path '../../test_helper.rb', __FILE__
+ ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:1:15: C: [Correctable] Style/ExpandPathArguments: Use expand_path('../test_helper.rb', __dir__) instead of expand_path('../../test_helper.rb', __FILE__).
+ require File.expand_path '../../test_helper.rb', __FILE__
+              ^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:3:1: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+class CareerTest < MiniTest::Unit::TestCase ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class CareerTest.
+class CareerTest < MiniTest::Unit::TestCase
+^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:4:19: W: Lint/Void: Variable TestCase used in void context.
+  MiniTest::Unit::TestCase
+                  ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:7:1: C: [Correctable] Layout/EmptyLinesAroundMethodBody: Extra empty line detected at method body beginning.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:8:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	#Arrange
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:8:4: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+  	#Arrange
+   ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:9:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	career = Career.create(name: 'Spaceman')
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:9:3: C: [Correctable] Layout/IndentationWidth: Use 2 (not 1) spaces for indentation.
+  	career = Career.create(name: 'Spaceman')
+  ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:10:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:10:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:11:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:12:5: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+    #Act
+    ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:13:5: C: Layout/IndentationConsistency: Inconsistent indentation detected.
+    Survey.create(username: 'Nico Ortiz', career_id: career.id)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:14:5: C: Layout/IndentationConsistency: Inconsistent indentation detected.
+    Survey.create(username: 'Joaco Moran', career_id: career.id)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:15:5: C: Layout/IndentationConsistency: Inconsistent indentation detected.
+    Survey.create(username: 'Agus Giungi', career_id: career.id)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:16:5: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+    #Assert
+    ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:17:5: C: Layout/IndentationConsistency: Inconsistent indentation detected.
+    assert_equal(career.surveys.count,3)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:17:38: C: [Correctable] Layout/SpaceAfterComma: Space missing after comma.
+    assert_equal(career.surveys.count,3)
+                                     ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:21:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:22:5: C: [Correctable] Layout/CommentIndentation: Incorrect indentation detected (column 4 instead of 3).
+    #Arrange
+    ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:22:5: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+    #Arrange
+    ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:23:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	career = Career.create(name: 'Dentist')
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:23:3: C: [Correctable] Layout/IndentationWidth: Use 2 (not 1) spaces for indentation.
+  	career = Career.create(name: 'Dentist')
+  ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:25:5: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+    #Act
+    ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:26:5: C: Layout/IndentationConsistency: Inconsistent indentation detected.
+    Outcome.create(career_id: career.id, choice_id: 1);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:26:55: C: [Correctable] Style/Semicolon: Do not use semicolons to terminate expressions.
+    Outcome.create(career_id: career.id, choice_id: 1);
+                                                      ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:27:5: C: Layout/IndentationConsistency: Inconsistent indentation detected.
+    Outcome.create(career_id: career.id, choice_id: 2);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:27:55: C: [Correctable] Style/Semicolon: Do not use semicolons to terminate expressions.
+    Outcome.create(career_id: career.id, choice_id: 2);
+                                                      ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:29:5: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+    #Assert
+    ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:30:5: C: Layout/IndentationConsistency: Inconsistent indentation detected.
+    assert_equal(career.outcomes.count, 2)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:33:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:35:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/careers_test.rb:36:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require File.expand_path '../../test_helper.rb', __FILE__
+^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:1:14: C: [Correctable] Style/ExpandPathArguments: Use expand_path('../test_helper.rb', __dir__) instead of expand_path('../../test_helper.rb', __FILE__).
+require File.expand_path '../../test_helper.rb', __FILE__
+             ^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class ChoiceTest.
+class ChoiceTest < MiniTest::Unit::TestCase
+^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:4:19: W: Lint/Void: Variable TestCase used in void context.
+  MiniTest::Unit::TestCase
+                  ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:7:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	#Arrenge
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:7:4: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+  	#Arrenge
+   ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:8:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	choice = Choice.new
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:8:3: C: [Correctable] Layout/IndentationWidth: Use 2 (not 1) spaces for indentation.
+  	choice = Choice.new
+  ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:10:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	#Act
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:10:4: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+  	#Act
+   ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:11:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	choice.text = nil
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:13:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	#Assert
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:13:4: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+  	#Assert
+   ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:14:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	assert_equal(choice.valid?,false)
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:14:30: C: [Correctable] Layout/SpaceAfterComma: Space missing after comma.
+  	assert_equal(choice.valid?,false)
+                             ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:17:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 3) spaces for indentation.
+   def test_choice_must_has_question_id
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:17:4: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+   def test_choice_must_has_question_id ...
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:18:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	#Arrenge
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:18:4: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+  	#Arrenge
+   ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:19:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	choice = Choice.new
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:19:4: C: [Correctable] Layout/IndentationWidth: Use 2 (not 0) spaces for indentation.
+  	choice = Choice.new
+   
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:21:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	#Act
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:21:4: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+  	#Act
+   ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:22:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	choice.question_id = ''
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:24:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	#Assert
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:24:4: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+  	#Assert
+   ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:25:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	assert_equal(choice.valid?,false)
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:25:30: C: [Correctable] Layout/SpaceAfterComma: Space missing after comma.
+  	assert_equal(choice.valid?,false)
+                             ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:26:3: W: [Correctable] Layout/DefEndAlignment: end at 26, 2 is not aligned with def at 17, 3.
+  end
+  ^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:29:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	#Arrange
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:29:4: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+  	#Arrange
+   ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:30:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	question = Question.create(description: '¿Te hace daño la pantalla de la pc?', type: 'MC', number: 2, name: 'Salud')
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:30:3: C: [Correctable] Layout/IndentationWidth: Use 2 (not 1) spaces for indentation.
+  	question = Question.create(description: '¿Te hace daño la pantalla de la pc?', type: 'MC', number: 2, name: 'Salud')
+  ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:31:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	choice1 = Choice.create(text: 'Si', question_id: question.id)
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:32:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	choice2 = Choice.create(text: 'De vez en cuando', question_id: question.id)
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:33:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	choice3 = Choice.create(text: 'No', question_id: question.id)
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:35:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	#Assert
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:35:4: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+  	#Assert
+   ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:36:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	assert_equal(choice1.question.id == choice2.question.id, choice2.question.id == choice3.question.id)
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:39:3: C: Metrics/AbcSize: Assignment Branch Condition size for test_choice_has_many_response is too high. [<6, 19, 0> 19.92/17]
+  def test_choice_has_many_response ...
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:40:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	#Arrange
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:40:4: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+  	#Arrange
+   ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:41:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	survey = Survey.create(username: 'Federico')
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:41:3: C: [Correctable] Layout/IndentationWidth: Use 2 (not 1) spaces for indentation.
+  	survey = Survey.create(username: 'Federico')
+  ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:43:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	question = Question.create(description: '¿Arrancaste alguna carrera y dejaste?', type: 'MC', number: 7, name: 'General')
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:43:121: C: [Correctable] Layout/LineLength: Line is too long. [123/120]
+  	question = Question.create(description: '¿Arrancaste alguna carrera y dejaste?', type: 'MC', number: 7, name: 'General')
+                                                                                                                        ^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:45:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	choice = Choice.create(text: 'Nunca', question_id: question.id)
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:47:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	resp1 = Response.create(choice_id: choice.id, question_id: question.id, survey_id: survey.id)
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:47:4: W: Lint/UselessAssignment: Useless assignment to variable - resp1. Did you mean resp3?
+  	resp1 = Response.create(choice_id: choice.id, question_id: question.id, survey_id: survey.id)
+   ^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:48:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	resp2 = Response.create(choice_id: choice.id, question_id: question.id, survey_id: survey.id)
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:48:4: W: Lint/UselessAssignment: Useless assignment to variable - resp2. Did you mean resp3?
+  	resp2 = Response.create(choice_id: choice.id, question_id: question.id, survey_id: survey.id)
+   ^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:49:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	resp3 = Response.create(choice_id: choice.id, question_id: question.id, survey_id: survey.id)
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:49:4: W: Lint/UselessAssignment: Useless assignment to variable - resp3. Did you mean resp2?
+  	resp3 = Response.create(choice_id: choice.id, question_id: question.id, survey_id: survey.id)
+   ^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:51:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	#Assert
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:51:4: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+  	#Assert
+   ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:52:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	assert_equal(choice.responses.count,3)
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:52:39: C: [Correctable] Layout/SpaceAfterComma: Space missing after comma.
+  	assert_equal(choice.responses.count,3)
+                                      ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:55:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:56:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:57:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:58:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:59:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/choices_test.rb:59:1: C: [Correctable] Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/finished_surveys_test.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require File.expand_path '../../test_helper.rb', __FILE__
+^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/finished_surveys_test.rb:1:14: C: [Correctable] Style/ExpandPathArguments: Use expand_path('../test_helper.rb', __dir__) instead of expand_path('../../test_helper.rb', __FILE__).
+require File.expand_path '../../test_helper.rb', __FILE__
+             ^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/finished_surveys_test.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class FinishedSurveyTest.
+class FinishedSurveyTest < MiniTest::Unit::TestCase
+^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/finished_surveys_test.rb:4:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    MiniTest::Unit::TestCase
+^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/finished_surveys_test.rb:4:21: W: Lint/Void: Variable TestCase used in void context.
+    MiniTest::Unit::TestCase
+                    ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/finished_surveys_test.rb:6:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def test_finished_survey_has_a_career
+^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/finished_surveys_test.rb:7:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Arrange
+        ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/finished_surveys_test.rb:8:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        career = Career.create(name: 'Tester')
+    ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/finished_surveys_test.rb:9:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Act
+        ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/finished_surveys_test.rb:11:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Assert
+        ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/finished_surveys_test.rb:15:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def test_finished_survey_has_career
+^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/finished_surveys_test.rb:16:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Arrange
+        ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/finished_surveys_test.rb:17:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        finished_survey = Finished_Survey.new
+    ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/finished_surveys_test.rb:18:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Act
+        ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/finished_surveys_test.rb:20:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Assert
+        ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/finished_surveys_test.rb:23:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require File.expand_path '../../test_helper.rb', __FILE__
+^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:1:14: C: [Correctable] Style/ExpandPathArguments: Use expand_path('../test_helper.rb', __dir__) instead of expand_path('../../test_helper.rb', __FILE__).
+require File.expand_path '../../test_helper.rb', __FILE__
+             ^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class OutcomeTest.
+class OutcomeTest < MiniTest::Unit::TestCase
+^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:4:19: W: Lint/Void: Variable TestCase used in void context.
+  MiniTest::Unit::TestCase
+                  ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:7:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	#Arrange
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:7:4: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+  	#Arrange
+   ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:8:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	outcome = Outcome.new
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:8:3: C: [Correctable] Layout/IndentationWidth: Use 2 (not 1) spaces for indentation.
+  	outcome = Outcome.new
+  ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:10:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	#Act
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:10:4: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+  	#Act
+   ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:11:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	outcome.career_id = nil
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:13:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	#Assert
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:13:4: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+  	#Assert
+   ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:14:1: C: [Correctable] Layout/IndentationStyle: Tab detected in indentation.
+  	assert_equal(outcome.valid?,false)	
+^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:14:31: C: [Correctable] Layout/SpaceAfterComma: Space missing after comma.
+  	assert_equal(outcome.valid?,false)	
+                              ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:14:38: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+  	assert_equal(outcome.valid?,false)	
+                                     ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:18:5: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+    #Arrange
+    ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:21:5: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+    #Act
+    ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:24:5: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+    #Assert
+    ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:25:32: C: [Correctable] Layout/SpaceAfterComma: Space missing after comma.
+    assert_equal(outcome.valid?,false)  
+                               ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:25:39: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+    assert_equal(outcome.valid?,false)  
+                                      ^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:29:5: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+    #Arrange
+    ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:34:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:35:5: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+    #Assert
+    ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:39:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/outcomes_test.rb:39:1: C: [Correctable] Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require File.expand_path '../../test_helper.rb', __FILE__
+^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:1:14: C: [Correctable] Style/ExpandPathArguments: Use expand_path('../test_helper.rb', __dir__) instead of expand_path('../../test_helper.rb', __FILE__).
+require File.expand_path '../../test_helper.rb', __FILE__
+             ^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class QuestionTest.
+class QuestionTest < MiniTest::Unit::TestCase
+^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:4:19: W: Lint/Void: Variable TestCase used in void context.
+  MiniTest::Unit::TestCase
+                  ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:6:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def test_question_must_has_name
+^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:6:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def test_question_must_has_name ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:7:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Arrange  
+        ^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:7:17: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+        #Arrange  
+                ^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:8:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        question = Question.new 
+    ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:8:32: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+        question = Question.new 
+                               ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:9:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:10:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Act
+        ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:12:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:13:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Assert
+        ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:17:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def test_question_must_has_number
+^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:17:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def test_question_must_has_number ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:18:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Arrange
+        ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:19:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        question = Question.new(name:'Aptitudes', number: nil)
+    ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:19:37: C: [Correctable] Layout/SpaceAfterColon: Space missing after colon.
+        question = Question.new(name:'Aptitudes', number: nil)
+                                    ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:20:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:21:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Act
+        ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:22:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:23:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Assert
+        ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:27:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def test_question_must_has_description
+^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:27:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def test_question_must_has_description ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:28:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Arrange
+        ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:29:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        question = Question.new(name:'Matematicas', number: 10, description: nil)
+    ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:29:37: C: [Correctable] Layout/SpaceAfterColon: Space missing after colon.
+        question = Question.new(name:'Matematicas', number: 10, description: nil)
+                                    ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:30:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:31:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Act
+        ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:32:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:33:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Assert
+        ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:37:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def test_question_must_has_type
+^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:37:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def test_question_must_has_type ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:38:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Arrange
+        ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:39:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        question = Question.new(name:'Gustos', number: 6, description: '¿Te gusta el helado?', type: nil)
+    ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:39:37: C: [Correctable] Layout/SpaceAfterColon: Space missing after colon.
+        question = Question.new(name:'Gustos', number: 6, description: '¿Te gusta el helado?', type: nil)
+                                    ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:40:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:41:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Act
+        ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:42:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:43:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Assert
+        ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:47:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def test_question_must_has_atributes_valid
+^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:47:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def test_question_must_has_atributes_valid ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:48:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Arrange
+        ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:49:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        question = Question.new(name: 'Deportes', number: 1, description: '¿Realiza deportes?', type: 'Multiple opcion')
+    ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:50:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:51:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Act
+        ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:52:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:53:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Assert
+        ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:57:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def test_has_many_responses
+^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:57:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def test_has_many_responses ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:57:5: C: Metrics/AbcSize: Assignment Branch Condition size for test_has_many_responses is too high. [<6, 19, 0> 19.92/17]
+    def test_has_many_responses ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:58:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Arrange
+        ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:59:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        question = Question.create(name: 'Series', number: 34, description: 'The Office o Friends', type: 'Una opcion')
+    ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:60:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:61:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Act
+        ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:63:9: W: Lint/UselessAssignment: Useless assignment to variable - choice2. Did you mean choice?
+        choice2 = Choice.create(text: 'Friends', question_id: question.id)
+        ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:70:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Assert
+        ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:74:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def test_has_many_choices
+^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:74:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def test_has_many_choices ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:75:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Arrange
+        ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:76:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        question = Question.create(name: 'Maths', number: 123, description: '2+2?', type: 'Multiple choice')
+    ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:77:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:78:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Act
+        ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:84:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Assert
+        ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/questions_test.rb:87:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require File.expand_path '../../test_helper.rb', __FILE__
+^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:1:14: C: [Correctable] Style/ExpandPathArguments: Use expand_path('../test_helper.rb', __dir__) instead of expand_path('../../test_helper.rb', __FILE__).
+require File.expand_path '../../test_helper.rb', __FILE__
+             ^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class SurveyTest.
+class SurveyTest < MiniTest::Unit::TestCase
+^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:4:19: W: Lint/Void: Variable TestCase used in void context.
+  MiniTest::Unit::TestCase
+                  ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:6:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def test_response_has_question
+^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:6:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def test_response_has_question ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:7:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Arrange
+        ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:8:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        response = Response.new
+    ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:10:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Act
+        ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:13:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Assert
+        ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:14:37: C: [Correctable] Layout/SpaceAfterComma: Space missing after comma.
+        assert_equal(response.valid?,false)
+                                    ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:17:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def test_response_has_survey
+^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:17:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def test_response_has_survey ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:18:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Arrange
+        ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:19:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        response = Response.new(question_id: 1)
+    ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:21:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Act
+        ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:24:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Assert
+        ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:28:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def test_response_has_choice
+^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:28:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def test_response_has_choice ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:29:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Arrange
+        ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:30:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        response = Response.new(question_id: 1, survey_id: 1)
+    ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:32:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Act
+        ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:35:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Assert
+        ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:39:1: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def test_response_has_choice_survey_and_question
+^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:39:5: C: [Correctable] Layout/IndentationConsistency: Inconsistent indentation detected.
+    def test_response_has_choice_survey_and_question ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:39:5: C: Metrics/AbcSize: Assignment Branch Condition size for test_response_has_choice_survey_and_question is too high. [<8, 19, 1> 20.64/17]
+    def test_response_has_choice_survey_and_question ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:40:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Arrange
+        ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:41:5: C: [Correctable] Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+        question = Question.create(name: 'Maths', number: 1200, description: '2*4', type: 'One choice')
+    ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:43:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Act
+        ^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:44:9: W: Lint/UselessAssignment: Useless assignment to variable - choice1. Did you mean choice?
+        choice1 = Choice.create(text: '2', question_id: question.id)
+        ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:46:9: W: Lint/UselessAssignment: Useless assignment to variable - choice3. Did you mean choice?
+        choice3 = Choice.create(text: '6', question_id: question.id)
+        ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:55:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:56:9: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+        #Assert
+        ^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:59:1: C: [Correctable] Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/responses_test.rb:60:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require File.expand_path '../../test_helper.rb', __FILE__
+^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:1:14: C: [Correctable] Style/ExpandPathArguments: Use expand_path('../test_helper.rb', __dir__) instead of expand_path('../../test_helper.rb', __FILE__).
+require File.expand_path '../../test_helper.rb', __FILE__
+             ^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class SurveyTest.
+class SurveyTest < MiniTest::Unit::TestCase
+^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:4:19: W: Lint/Void: Variable TestCase used in void context.
+  MiniTest::Unit::TestCase
+                  ^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:12:38: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+    assert_equal survey.valid?, false 
+                                     ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:17:32: C: [Correctable] Layout/SpaceAfterColon: Space missing after colon.
+    career = Career.create(name:'Agrimensor')
+                               ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:18:37: C: [Correctable] Layout/SpaceAfterColon: Space missing after colon.
+    survey1 = Survey.create(username:'Nico Ortiz', career_id: career.id)
+                                    ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:19:37: C: [Correctable] Layout/SpaceAfterColon: Space missing after colon.
+    survey2 = Survey.create(username:'Joaco Moran', career_id: career.id)
+                                    ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:21:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:23:35: C: [Correctable] Layout/SpaceAfterComma: Space missing after comma.
+    assert_equal(survey1.career.id,survey2.career.id)
+                                  ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:28:33: C: [Correctable] Layout/SpaceAfterColon: Space missing after colon.
+    career1 = Career.create(name:'Agrimensor')
+                                ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:29:33: C: [Correctable] Layout/SpaceAfterColon: Space missing after colon.
+    career2 = Career.create(name:'Peon de estancia')
+                                ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:30:37: C: [Correctable] Layout/SpaceAfterColon: Space missing after colon.
+    survey1 = Survey.create(username:'Nico Ortiz', career_id: career1.id)
+                                    ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:31:37: C: [Correctable] Layout/SpaceAfterColon: Space missing after colon.
+    survey2 = Survey.create(username:'Joaco Moran', career_id: career2.id)
+                                    ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:33:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:35:23: C: [Correctable] Layout/SpaceAfterComma: Space missing after comma.
+    assert_equal(false,survey1.career.id==survey2.career.id)
+                      ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:35:41: C: [Correctable] Layout/SpaceAroundOperators: Surrounding space missing for operator ==.
+    assert_equal(false,survey1.career.id==survey2.career.id)
+                                        ^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/models/surveys_test.rb:37:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+/home/joaquin/AyDsTaller/testVocacional-app/tests/test_helper.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+ENV['RACK_ENV'] = 'test'
+^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/test_helper.rb:8:4: C: [Correctable] Layout/FirstArgumentIndentation: Indent the first argument one step more than the start of the previous line.
+   adapter: 'postgres', ...
+   ^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/test_helper.rb:12:21: C: [Correctable] Layout/MultilineMethodCallBraceLayout: Closing method call brace must be on the line after the last argument when opening brace is on a separate line from the first argument.
+   password: 'magic')
+                    ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/test_helper.rb:13:1: C: Style/Documentation: Missing top-level documentation comment for class Minitest::HooksSpec.
+class Minitest::HooksSpec
+^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/test_helper.rb:13:7: C: [Correctable] Style/ClassAndModuleChildren: Use nested module/class definitions instead of compact style.
+class Minitest::HooksSpec
+      ^^^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/test_helper.rb:15:20: C: [Correctable] Style/HashSyntax: Use the new Ruby 1.9 hash syntax.
+    DB.transaction(:rollback=>:always, :auto_savepoint=>true){super}
+                   ^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/test_helper.rb:15:29: C: [Correctable] Layout/SpaceAroundOperators: Surrounding space missing for operator =>.
+    DB.transaction(:rollback=>:always, :auto_savepoint=>true){super}
+                            ^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/test_helper.rb:15:40: C: [Correctable] Style/HashSyntax: Use the new Ruby 1.9 hash syntax.
+    DB.transaction(:rollback=>:always, :auto_savepoint=>true){super}
+                                       ^^^^^^^^^^^^^^^^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/test_helper.rb:15:55: C: [Correctable] Layout/SpaceAroundOperators: Surrounding space missing for operator =>.
+    DB.transaction(:rollback=>:always, :auto_savepoint=>true){super}
+                                                      ^^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/test_helper.rb:15:62: C: [Correctable] Layout/SpaceBeforeBlockBraces: Space missing to the left of {.
+    DB.transaction(:rollback=>:always, :auto_savepoint=>true){super}
+                                                             ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/test_helper.rb:15:63: C: [Correctable] Layout/SpaceInsideBlockBraces: Space missing inside {.
+    DB.transaction(:rollback=>:always, :auto_savepoint=>true){super}
+                                                              ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/test_helper.rb:15:68: C: [Correctable] Layout/SpaceInsideBlockBraces: Space missing inside }.
+    DB.transaction(:rollback=>:always, :auto_savepoint=>true){super}
+                                                                   ^
+/home/joaquin/AyDsTaller/testVocacional-app/tests/test_helper.rb:18:36: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+require File.expand_path './app.rb'
+                                   
+
+8 files inspected, 273 offenses detected, 242 offenses auto-correctable
