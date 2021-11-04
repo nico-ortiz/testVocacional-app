@@ -1,0 +1,112 @@
+Inspecting 1 file
+W
+
+Offenses:
+
+app.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require './models/init.rb'
+^
+app.rb:1:23: C: [Correctable] Style/RedundantFileExtensionInRequire: Redundant .rb file extension detected.
+require './models/init.rb'
+                      ^^^
+app.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class App.
+class App < Sinatra::Base
+^^^^^^^^^
+app.rb:7:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+app.rb:8:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+app.rb:12:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+app.rb:14:7: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  get "/careers" do
+      ^^^^^^^^^^
+app.rb:19:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+app.rb:20:7: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  get "/career" do
+      ^^^^^^^^^
+app.rb:21:23: C: [Correctable] Style/MethodCallWithoutArgsParentheses: Do not use parentheses for method calls with no arguments.
+    get_career_by_name()
+                      ^^
+app.rb:24:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+app.rb:25:7: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  get "/search-career" do
+      ^^^^^^^^^^^^^^^^
+app.rb:26:23: C: [Correctable] Style/MethodCallWithoutArgsParentheses: Do not use parentheses for method calls with no arguments.
+    get_career_by_name()
+                      ^^
+app.rb:29:7: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  get "/career-query" do
+      ^^^^^^^^^^^^^^^
+app.rb:38:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+app.rb:39:21: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+  post '/surveys' do    
+                    ^^^^
+app.rb:42:7: W: Lint/Void: Literal [201, { 'Location' => "surveys/#{@survey.id}" }, 'User created sucesfully'] used in void context.
+      [201, { 'Location' => "surveys/#{@survey.id}" }, 'User created sucesfully'] 
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app.rb:42:82: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+      [201, { 'Location' => "surveys/#{@survey.id}" }, 'User created sucesfully'] 
+                                                                                 ^
+app.rb:50:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+app.rb:51:7: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  get "/surveys" do
+      ^^^^^^^^^^
+app.rb:53:27: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+    erb :info_survey_index 
+                          ^
+app.rb:56:8: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  post "/responses" do
+       ^^^^^^^^^^^^
+app.rb:58:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+app.rb:63:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+app.rb:64:5: C: Naming/VariableName: Use snake_case for variable names.
+    careerWithMaxPoints = survey.career_obtained(survey)
+    ^^^^^^^^^^^^^^^^^^^
+app.rb:66:17: C: Naming/VariableName: Use snake_case for variable names.
+    career_id = careerWithMaxPoints["career"]
+                ^^^^^^^^^^^^^^^^^^^
+app.rb:66:37: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    career_id = careerWithMaxPoints["career"]
+                                    ^^^^^^^^
+app.rb:69:5: C: Naming/VariableName: Use snake_case for variable names.
+    @pointsTotal = careerWithMaxPoints["points"]
+    ^^^^^^^^^^^^
+app.rb:69:20: C: Naming/VariableName: Use snake_case for variable names.
+    @pointsTotal = careerWithMaxPoints["points"]
+                   ^^^^^^^^^^^^^^^^^^^
+app.rb:69:40: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @pointsTotal = careerWithMaxPoints["points"]
+                                       ^^^^^^^^
+app.rb:70:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+app.rb:74:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+app.rb:75:7: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  get "/finished_survey" do
+      ^^^^^^^^^^^^^^^^^^
+app.rb:76:1: C: [Correctable] Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body beginning.
+app.rb:82:40: C: [Correctable] Layout/SpaceBeforeBlockBraces: Space missing to the left of {.
+    @count = Finished_Survey.all.filter{|x| x.career_id == career && x.created_at.strftime("%Y-%m-%d") >= @start_date && x.created_at.strftime("%Y-%m-%d") <= @finish_date}.count
+                                       ^
+app.rb:82:40: C: [Correctable] Layout/SpaceInsideBlockBraces: Space between { and | missing.
+    @count = Finished_Survey.all.filter{|x| x.career_id == career && x.created_at.strftime("%Y-%m-%d") >= @start_date && x.created_at.strftime("%Y-%m-%d") <= @finish_date}.count
+                                       ^^
+app.rb:82:92: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @count = Finished_Survey.all.filter{|x| x.career_id == career && x.created_at.strftime("%Y-%m-%d") >= @start_date && x.created_at.strftime("%Y-%m-%d") <= @finish_date}.count
+                                                                                           ^^^^^^^^^^
+app.rb:82:121: C: [Correctable] Layout/LineLength: Line is too long. [177/120]
+    @count = Finished_Survey.all.filter{|x| x.career_id == career && x.created_at.strftime("%Y-%m-%d") >= @start_date && x.created_at.strftime("%Y-%m-%d") <= @finish_date}.count
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app.rb:82:144: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    @count = Finished_Survey.all.filter{|x| x.career_id == career && x.created_at.strftime("%Y-%m-%d") >= @start_date && x.created_at.strftime("%Y-%m-%d") <= @finish_date}.count
+                                                                                                                                               ^^^^^^^^^^
+app.rb:82:171: C: [Correctable] Layout/SpaceInsideBlockBraces: Space missing inside }.
+    @count = Finished_Survey.all.filter{|x| x.career_id == career && x.created_at.strftime("%Y-%m-%d") >= @start_date && x.created_at.strftime("%Y-%m-%d") <= @finish_date}.count
+                                                                                                                                                                          ^
+app.rb:86:1: C: [Correctable] Layout/EmptyLines: Extra blank line detected.
+app.rb:87:7: C: Naming/AccessorMethodName: Do not prefix reader method names with get_.
+  def get_career_by_name
+      ^^^^^^^^^^^^^^^^^^
+app.rb:89:27: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+    erb :info_career_index  
+                          ^^
+app.rb:91:1: C: [Correctable] Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end.
+app.rb:93:1: C: [Correctable] Layout/TrailingEmptyLines: 1 trailing blank lines detected.
+
+1 file inspected, 45 offenses detected, 38 offenses auto-correctable
