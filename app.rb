@@ -18,31 +18,17 @@ class App < Sinatra::Base
 
 
   get "/career" do
-    @career = params[:career_name]
-    erb :info_career_index 
+    get_career_by_name()
   end
 
 
   get "/search-career" do
-    @career = params[:career_name]
-    erb :info_career_index
-  end
-  
-  post "/posts" do
-    request.body.rewind  # in case someone already read it
-    data = JSON.parse request.body.read
-    post = Post.new(description: data['desc'])
-    if post.save
-      [201, { 'Location' => "posts/#{post.id}" }, 'CREATED']
-    else
-      [500, {}, 'Internal Server Error']
-    end
+    get_career_by_name()
   end
 
-
-  get '/posts' do
-    p = Post.where(id: 1).last
-    p.description
+  get "/career-query" do
+    @careers = Career.all
+    erb :career_query
   end
 
   get '/vocational_test' do
@@ -78,13 +64,32 @@ class App < Sinatra::Base
     careerWithMaxPoints = survey.career_obtained(survey)
 
     career_id = careerWithMaxPoints["career"]
+    Finished_Survey.create(career_id: career_id)
     @career = Career.find(id: career_id).name
     @pointsTotal = careerWithMaxPoints["points"]
         
     survey.update career_id: career_id
     erb :finish_template
   end
+  
+  get "/finished_survey" do
+
+    @carrera = params[:carrera]
+    @start_date = params[:start_date]
+    @finish_date = params[:finish_date]
+
+    career = Career.find(name: @carrera).id
+    @count = Finished_Survey.all.filter do |x|
+      x.career_id == career && x.created_at.strftime("%Y-%m-%d") >= @start_date && x.created_at.strftime("%Y-%m-%d") <= @finish_date
+    end.count
+    erb :result_career_query
+  end
+
+
+  def get_career_by_name
+    @career = params[:career_name]
+    erb :info_career_index  
+  end
 
 end
-
 

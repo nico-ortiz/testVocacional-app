@@ -1,40 +1,40 @@
-require File.expand_path '../../test_helper.rb', __FILE__
+# frozen_string_literal: true
 
-class OutcomeTest < MiniTest::Unit::TestCase
-  MiniTest::Unit::TestCase
+require File.expand_path '../test_helper.rb', __dir__
+
+class OutcomeTest < MiniTest::Unit::TestCase # rubocop:todo Style/Documentation
+  MiniTest::Unit::TestCase # rubocop:todo Lint/Void
 
   def test_outcome_has_a_career_id
-  	#Arrange
-  	outcome = Outcome.new
+    # Arrange
+    outcome = Outcome.new
 
-  	#Act
-  	outcome.career_id = nil
+    # Act
+    outcome.career_id = nil
 
-  	#Assert
-  	assert_equal(outcome.valid?,false)	
+    # Assert
+    assert_equal(outcome.valid?, false)
   end
 
   def test_outcome_has_a_choice_id
-    #Arrange
+    # Arrange
     outcome = Outcome.new
 
-    #Act
+    # Act
     outcome.choice_id = nil
 
-    #Assert
-    assert_equal(outcome.valid?,false)  
+    # Assert
+    assert_equal(outcome.valid?, false)
   end
 
   def test_outcome_must_has_same_choice_id
-    #Arrange
+    # Arrange
     choice = Choice.create(text: 'Hola que tal')
     career = Career.create(name: 'Agronomia')
     out1 = Outcome.create(choice_id: choice.id, career_id: career.id)
     out2 = Outcome.create(choice_id: choice.id, career_id: career.id)
-    
-    #Assert
+
+    # Assert
     assert_equal(out2.choice.id == out1.choice.id, true)
   end
-
-
 end
