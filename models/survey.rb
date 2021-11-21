@@ -1,34 +1,38 @@
-class Survey < Sequel::Model
-    many_to_one :career
-    one_to_many :responses
+# frozen_string_literal: true
 
-    plugin :validation_helpers
-    def validate
-    	super
-         validates_presence [:username]
-  	end
+class Survey < Sequel::Model # rubocop:todo Style/Documentation
+  many_to_one :career
+  one_to_many :responses
 
-    
-    def career_obtained (survey)
+  plugin :validation_helpers
+  def validate
+      super # rubocop:todo Layout/IndentationWidth
+      validates_presence [:username]
+  end
 
-        careersPoints = []
+  def career_obtained(survey) # rubocop:todo Metrics/AbcSize, Metrics/MethodLength
+      careersPoints = [] # rubocop:todo Layout/IndentationWidth, Naming/VariableName
 
-        for career in Career.all 
-          careersPoints.push({"career" => career.id, "points" => 0})
-        end
+      Career.all.each do |career|
+        careersPoints.push({ 'career' => career.id, 'points' => 0 }) # rubocop:todo Naming/VariableName
+      end
 
-        choicesUser = survey.responses.map{ |elem| elem.choice_id }
+      choicesUser = survey.responses.map(&:choice_id) # rubocop:todo Naming/VariableName
 
-        #Filtra las choices de Outcome, tal que estas choices son de las responses del user
-        choices = Outcome.all.filter{ |elem| choicesUser.include? elem.choice_id}
+      # Filtra las choices de Outcome, tal que estas choices son de las responses del user
+      choices = Outcome.all.filter{ |elem| choicesUser.include? elem.choice_id} # rubocop:todo Naming/VariableName
 
-        for c in choices
-            idx = careersPoints.index{ |elem| elem["career"] == c.career_id}
-            if(idx)
-                careersPoints[idx]["points"] += 1
-            end
-        end
+      choices.each do |c|
+          # rubocop:todo Naming/VariableName
+          idx = careersPoints.index{ |elem| elem['career'] == c.career_id} # rubocop:todo Layout/IndentationWidth, Naming/VariableName
+          # rubocop:enable Naming/VariableName
+          if idx
+              careersPoints[idx]['points'] += 1 # rubocop:todo Layout/IndentationWidth, Naming/VariableName
+          end
+      end
 
-        careerWithMaxPoints = careersPoints.max_by{ |elem| elem["points"]}
-    end
+      # rubocop:todo Naming/VariableName
+      careerWithMaxPoints = careersPoints.max_by{ |elem| elem['points']} # rubocop:todo Lint/UselessAssignment, Naming/VariableName
+    # rubocop:enable Naming/VariableName
+  end
 end

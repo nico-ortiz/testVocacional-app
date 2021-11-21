@@ -1,10 +1,12 @@
-class Question < Sequel::Model
-	one_to_many :responses
-	one_to_many :choices
+# frozen_string_literal: true
 
-	plugin :validation_helpers
-	def validate
-		super	
-		validates_presence [:name, :description, :number, :type]
-	end
+class Question < Sequel::Model # rubocop:todo Style/Documentation
+  one_to_many :responses
+  one_to_many :choices
+
+  plugin :validation_helpers
+  def validate
+    super
+    validates_presence %i[name description number type]
+  end
 end

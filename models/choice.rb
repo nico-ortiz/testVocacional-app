@@ -1,12 +1,13 @@
-class Choice < Sequel::Model
-	many_to_one :question
-	one_to_many :responses
-	one_to_many :outcomes	
+# frozen_string_literal: true
 
-	plugin :validation_helpers 
-	def validate
-		super 
-			validates_presence [:text, :question_id]
-	end
+class Choice < Sequel::Model # rubocop:todo Style/Documentation
+  many_to_one :question
+  one_to_many :responses
+  one_to_many :outcomes
 
+  plugin :validation_helpers
+  def validate
+    super
+    validates_presence %i[text question_id]
+  end
 end
