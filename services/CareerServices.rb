@@ -2,7 +2,7 @@ require "./models/init.rb"
 class CareerServices
 
     def self.get_all_careers()
-        Career.all
+        @surveys= Career.all
     end
 
     def self.query_career_date(start_date, finish_date, carrera)
