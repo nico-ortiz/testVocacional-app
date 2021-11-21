@@ -1,0 +1,622 @@
+diff --git a/db/migrations/000010_alter_table_question.rb b/db/migrations/000010_alter_table_question.rb
+index 602e9c9..9da8dee 100644
+--- a/db/migrations/000010_alter_table_question.rb
++++ b/db/migrations/000010_alter_table_question.rb
+@@ -1,13 +1,15 @@
++# frozen_string_literal: true
++
+ Sequel.migration do
+-    up do
+-        alter_table(:questions)do
+-            add_column :number, Integer
+-        end
+-    end
++  up do
++      alter_table(:questions) do # rubocop:todo Layout/IndentationWidth
++          add_column :number, Integer # rubocop:todo Layout/IndentationWidth
++      end
++  end
+ 
+-    down do
+-        alter_table(:questions)do
+-            drop_column :number
+-        end
++  down do
++    alter_table(:questions) do
++        drop_column :number # rubocop:todo Layout/IndentationWidth
+     end
++  end
+ end
+diff --git a/db/migrations/000011_alter_table_questions.rb b/db/migrations/000011_alter_table_questions.rb
+index 21c22e2..142b40a 100644
+--- a/db/migrations/000011_alter_table_questions.rb
++++ b/db/migrations/000011_alter_table_questions.rb
+@@ -1,7 +1,9 @@
++# frozen_string_literal: true
++
+ Sequel.migration do
+-    up do
+-        alter_table(:questions) do
+-            rename_column :name, :id_question
+-        end
+-    end
++  up do
++      alter_table(:questions) do # rubocop:todo Layout/IndentationWidth
++          rename_column :name, :id_question # rubocop:todo Layout/IndentationWidth
++      end
++  end
+ end
+diff --git a/db/migrations/000012_alter_table_surveys.rb b/db/migrations/000012_alter_table_surveys.rb
+index 79186e3..b02563e 100644
+--- a/db/migrations/000012_alter_table_surveys.rb
++++ b/db/migrations/000012_alter_table_surveys.rb
+@@ -1,13 +1,15 @@
++# frozen_string_literal: true
++
+ Sequel.migration do
+-    up do
+-        alter_table(:surveys) do
+-            add_foreign_key :id_career, :careers
+-        end
+-    end
++  up do
++      alter_table(:surveys) do # rubocop:todo Layout/IndentationWidth
++          add_foreign_key :id_career, :careers # rubocop:todo Layout/IndentationWidth
++      end
++  end
+ 
+-    down do
+-        alter_table(:surveys)do
+-            drop_foreign_key :id_career
+-        end
++  down do
++    alter_table(:surveys) do
++        drop_foreign_key :id_career # rubocop:todo Layout/IndentationWidth
+     end
+-end
+\ No newline at end of file
++  end
++end
+diff --git a/db/migrations/000013_alter_table_responses.rb b/db/migrations/000013_alter_table_responses.rb
+index c7557d8..550b4bc 100644
+--- a/db/migrations/000013_alter_table_responses.rb
++++ b/db/migrations/000013_alter_table_responses.rb
+@@ -1,17 +1,19 @@
++# frozen_string_literal: true
++
+ Sequel.migration do
+-    up do
+-        alter_table(:responses) do
+-            add_foreign_key :id_question, :questions
+-            add_foreign_key :id_survey, :surveys
+-            add_foreign_key :id_choice, :choices
+-        end
+-    end
++  up do
++      alter_table(:responses) do # rubocop:todo Layout/IndentationWidth
++          add_foreign_key :id_question, :questions # rubocop:todo Layout/IndentationWidth
++          add_foreign_key :id_survey, :surveys
++          add_foreign_key :id_choice, :choices
++      end
++  end
+ 
+-    down do
+-        alter_table(:responses)do
+-            drop_foreign_key :id_question
+-            drop_foreign_key :id_survey
+-            drop_foreign_key :id_choice
+-        end
++  down do
++    alter_table(:responses) do
++        drop_foreign_key :id_question # rubocop:todo Layout/IndentationWidth
++        drop_foreign_key :id_survey
++        drop_foreign_key :id_choice
+     end
+-end
+\ No newline at end of file
++  end
++end
+diff --git a/db/migrations/000014_alter_table_choices.rb b/db/migrations/000014_alter_table_choices.rb
+index b840a6d..5574e58 100644
+--- a/db/migrations/000014_alter_table_choices.rb
++++ b/db/migrations/000014_alter_table_choices.rb
+@@ -1,15 +1,15 @@
++# frozen_string_literal: true
++
+ Sequel.migration do
+-    up do
+-        alter_table(:choices) do
+-            add_foreign_key :id_question, :questions
+-           
+-        end
+-    end
++  up do
++      alter_table(:choices) do # rubocop:todo Layout/IndentationWidth
++          add_foreign_key :id_question, :questions # rubocop:todo Layout/IndentationWidth
++      end
++  end
+ 
+-    down do
+-        alter_table(:choices)do
+-            drop_foreign_key :id_question
+-          
+-        end
++  down do
++    alter_table(:choices) do
++        drop_foreign_key :id_question # rubocop:todo Layout/IndentationWidth
+     end
+-end
+\ No newline at end of file
++  end
++end
+diff --git a/db/migrations/000015_alter_table_outcomes.rb b/db/migrations/000015_alter_table_outcomes.rb
+index 3761a2f..a91e9d6 100644
+--- a/db/migrations/000015_alter_table_outcomes.rb
++++ b/db/migrations/000015_alter_table_outcomes.rb
+@@ -1,17 +1,17 @@
++# frozen_string_literal: true
++
+ Sequel.migration do
+-    up do
+-        alter_table(:outcomes) do
+-            add_foreign_key :id_career, :careers
+-            add_foreign_key :id_choice, :choices
+-           
+-        end
+-    end
++  up do
++      alter_table(:outcomes) do # rubocop:todo Layout/IndentationWidth
++          add_foreign_key :id_career, :careers # rubocop:todo Layout/IndentationWidth
++          add_foreign_key :id_choice, :choices
++      end
++  end
+ 
+-    down do
+-        alter_table(:outcomes)do
+-            drop_foreign_key :id_career
+-            drop_foreign_key :id_choice
+-          
+-        end
++  down do
++    alter_table(:outcomes) do
++        drop_foreign_key :id_career # rubocop:todo Layout/IndentationWidth
++        drop_foreign_key :id_choice
+     end
+-end
+\ No newline at end of file
++  end
++end
+diff --git a/db/migrations/000016_alter_table_fk_career.rb b/db/migrations/000016_alter_table_fk_career.rb
+index c03cca5..a83b4df 100644
+--- a/db/migrations/000016_alter_table_fk_career.rb
++++ b/db/migrations/000016_alter_table_fk_career.rb
+@@ -1,15 +1,15 @@
+-Sequel.migration do 
+-    up do
+-        alter_table(:careers) do
+-            rename_column :id_career, :career_id
+-        end    
+-        alter_table(:outcomes) do
+-            rename_column :id_career, :career_id
+-        end
+-        alter_table(:surveys) do
+-            rename_column :id_career, :career_id
+-        end
+-    end
+-end
+-
++# frozen_string_literal: true
+ 
++Sequel.migration do
++  up do
++      alter_table(:careers) do # rubocop:todo Layout/IndentationWidth
++          rename_column :id_career, :career_id # rubocop:todo Layout/IndentationWidth
++      end
++      alter_table(:outcomes) do
++          rename_column :id_career, :career_id # rubocop:todo Layout/IndentationWidth
++      end
++      alter_table(:surveys) do
++          rename_column :id_career, :career_id # rubocop:todo Layout/IndentationWidth
++      end
++  end
++end
+diff --git a/db/migrations/000017_alter_tables_id_and_fk.rb b/db/migrations/000017_alter_tables_id_and_fk.rb
+index fd535f7..91bd2ab 100644
+--- a/db/migrations/000017_alter_tables_id_and_fk.rb
++++ b/db/migrations/000017_alter_tables_id_and_fk.rb
+@@ -1,28 +1,30 @@
+-Sequel.migration do 
+-    up do
+-        alter_table(:careers) do
+-            rename_column :career_id, :id
+-        end
+-        alter_table(:choices) do
+-            rename_column :id_choice,   :id
+-            rename_column :id_question, :question_id
+-        end
+-        alter_table(:outcomes) do
+-            rename_column :id_outcome, :id
+-            rename_column :id_choice,  :choice_id
+-        end
+-        alter_table(:questions) do
+-            rename_column :id_question, :id
+-        end
+-        alter_table(:responses) do
+-            rename_column :id_response, :id
+-            rename_column :id_question, :question_id
+-            rename_column :id_survey,   :survey_id
+-            rename_column :id_choice,   :choice_id
+-        end
+-        alter_table(:surveys) do
+-            rename_column :id_survey, :id
+-            rename_column :name ,     :username
+-        end
+-    end
+-end
+\ No newline at end of file
++# frozen_string_literal: true
++
++Sequel.migration do # rubocop:todo Metrics/BlockLength
++  up do
++      alter_table(:careers) do # rubocop:todo Layout/IndentationWidth
++          rename_column :career_id, :id # rubocop:todo Layout/IndentationWidth
++      end
++      alter_table(:choices) do
++          rename_column :id_choice,   :id # rubocop:todo Layout/IndentationWidth
++          rename_column :id_question, :question_id
++      end
++      alter_table(:outcomes) do
++          rename_column :id_outcome, :id # rubocop:todo Layout/IndentationWidth
++          rename_column :id_choice,  :choice_id
++      end
++      alter_table(:questions) do
++          rename_column :id_question, :id # rubocop:todo Layout/IndentationWidth
++      end
++      alter_table(:responses) do
++          rename_column :id_response, :id # rubocop:todo Layout/IndentationWidth
++          rename_column :id_question, :question_id
++          rename_column :id_survey,   :survey_id
++          rename_column :id_choice,   :choice_id
++      end
++      alter_table(:surveys) do
++          rename_column :id_survey, :id # rubocop:todo Layout/IndentationWidth
++          rename_column :name, :username
++      end
++  end
++end
+diff --git a/db/migrations/000018_alter_table_questions.rb b/db/migrations/000018_alter_table_questions.rb
+index fdac303..d872313 100644
+--- a/db/migrations/000018_alter_table_questions.rb
++++ b/db/migrations/000018_alter_table_questions.rb
+@@ -1,13 +1,15 @@
++# frozen_string_literal: true
++
+ Sequel.migration do
+-    up do
+-        alter_table(:questions)do
+-            add_column :name, String
+-        end
+-    end
++  up do
++      alter_table(:questions) do # rubocop:todo Layout/IndentationWidth
++          add_column :name, String # rubocop:todo Layout/IndentationWidth
++      end
++  end
+ 
+-    down do
+-        alter_table(:questions)do
+-            drop_column :name
+-        end
++  down do
++    alter_table(:questions) do
++        drop_column :name # rubocop:todo Layout/IndentationWidth
+     end
++  end
+ end
+diff --git a/db/migrations/000019_create_finished_surveys_table.rb b/db/migrations/000019_create_finished_surveys_table.rb
+index fba1bc8..8dd7f70 100644
+--- a/db/migrations/000019_create_finished_surveys_table.rb
++++ b/db/migrations/000019_create_finished_surveys_table.rb
+@@ -1,13 +1,15 @@
+-Sequel.migration do 
+-    up do
+-        create_table(:finished_surveys) do
+-            primary_key :id_finished_survey
+-            DateTime    :created_at, default: Sequel::CURRENT_TIMESTAMP
+-            DateTime    :updated_at, default: Sequel::CURRENT_TIMESTAMP
+-        end
+-    end
++# frozen_string_literal: true
+ 
+-    down do
+-        drop_table(:finished_surveys)
+-    end
+-end
+\ No newline at end of file
++Sequel.migration do
++  up do
++      create_table(:finished_surveys) do # rubocop:todo Layout/IndentationWidth
++          primary_key :id_finished_survey # rubocop:todo Layout/IndentationWidth
++          DateTime    :created_at, default: Sequel::CURRENT_TIMESTAMP
++          DateTime    :updated_at, default: Sequel::CURRENT_TIMESTAMP
++      end
++  end
++
++  down do
++    drop_table(:finished_surveys)
++  end
++end
+diff --git a/db/migrations/00001_create_posts_table.rb b/db/migrations/00001_create_posts_table.rb
+index 3e1fd7e..12120f8 100644
+--- a/db/migrations/00001_create_posts_table.rb
++++ b/db/migrations/00001_create_posts_table.rb
+@@ -1,10 +1,12 @@
++# frozen_string_literal: true
++
+ Sequel.migration do
+   up do
+     create_table(:posts) do
+       primary_key   :id
+       String        :description
+-  #    DateTime      :created_at,   default: Sequel::CURRENT_TIMESTAMP
+-  #    DateTime      :updated_at,   default: Sequel::CURRENT_TIMESTAMP
++      #    DateTime      :created_at,   default: Sequel::CURRENT_TIMESTAMP
++      #    DateTime      :updated_at,   default: Sequel::CURRENT_TIMESTAMP
+     end
+   end
+ 
+diff --git a/db/migrations/000020_alter_finished_surveys_table.rb b/db/migrations/000020_alter_finished_surveys_table.rb
+index cde1d0d..f61f253 100644
+--- a/db/migrations/000020_alter_finished_surveys_table.rb
++++ b/db/migrations/000020_alter_finished_surveys_table.rb
+@@ -1,13 +1,15 @@
+-Sequel.migration do 
+-    up do
+-        alter_table(:finished_surveys) do
+-            add_foreign_key :career_id, :careers
+-        end
+-    end
+-        
+-    down do
+-        alter_table(:finished_surveys) do
+-            drop_foreign_key :career_id
+-        end
++# frozen_string_literal: true
++
++Sequel.migration do
++  up do
++      alter_table(:finished_surveys) do # rubocop:todo Layout/IndentationWidth
++          add_foreign_key :career_id, :careers # rubocop:todo Layout/IndentationWidth
++      end
++  end
++
++  down do
++    alter_table(:finished_surveys) do
++        drop_foreign_key :career_id # rubocop:todo Layout/IndentationWidth
+     end
++  end
+ end
+diff --git a/db/migrations/000021_alter_finished_surveys_table.rb b/db/migrations/000021_alter_finished_surveys_table.rb
+index e9ea350..d016abe 100644
+--- a/db/migrations/000021_alter_finished_surveys_table.rb
++++ b/db/migrations/000021_alter_finished_surveys_table.rb
+@@ -1,7 +1,9 @@
++# frozen_string_literal: true
++
+ Sequel.migration do
+-    up do
+-        alter_table(:finished_surveys) do
+-            rename_column :id_finished_survey, :id
+-        end
+-    end
+-end
+\ No newline at end of file
++  up do
++      alter_table(:finished_surveys) do # rubocop:todo Layout/IndentationWidth
++          rename_column :id_finished_survey, :id # rubocop:todo Layout/IndentationWidth
++      end
++  end
++end
+diff --git a/db/migrations/00002_add_date_fields_to_posts.rb b/db/migrations/00002_add_date_fields_to_posts.rb
+index c472662..21ad89f 100644
+--- a/db/migrations/00002_add_date_fields_to_posts.rb
++++ b/db/migrations/00002_add_date_fields_to_posts.rb
+@@ -1,3 +1,5 @@
++# frozen_string_literal: true
++
+ Sequel.migration do
+   up do
+     add_column :posts, :created_at, DateTime, default: Sequel::CURRENT_TIMESTAMP
+diff --git a/db/migrations/00003_create_questions_table.rb b/db/migrations/00003_create_questions_table.rb
+index 9adc968..a18654d 100644
+--- a/db/migrations/00003_create_questions_table.rb
++++ b/db/migrations/00003_create_questions_table.rb
+@@ -1,3 +1,5 @@
++# frozen_string_literal: true
++
+ Sequel.migration do
+   up do
+     create_table(:questions) do
+diff --git a/db/migrations/00004_create_careers_table.rb b/db/migrations/00004_create_careers_table.rb
+index d624d80..0ff968f 100644
+--- a/db/migrations/00004_create_careers_table.rb
++++ b/db/migrations/00004_create_careers_table.rb
+@@ -1,3 +1,5 @@
++# frozen_string_literal: true
++
+ Sequel.migration do
+   up do
+     create_table(:careers) do
+@@ -11,4 +13,4 @@ Sequel.migration do
+   down do
+     drop_table(:careers)
+   end
+-end
+\ No newline at end of file
++end
+diff --git a/db/migrations/00005_create_surveys_table.rb b/db/migrations/00005_create_surveys_table.rb
+index eb5ecc1..8606f90 100644
+--- a/db/migrations/00005_create_surveys_table.rb
++++ b/db/migrations/00005_create_surveys_table.rb
+@@ -1,14 +1,16 @@
++# frozen_string_literal: true
++
+ Sequel.migration do
+-    up do
+-      create_table(:surveys) do
+-        primary_key   :id_survey
+-        String        :name
+-        DateTime      :created_at,   default: Sequel::CURRENT_TIMESTAMP
+-        DateTime      :updated_at,   default: Sequel::CURRENT_TIMESTAMP
+-      end
++  up do
++    create_table(:surveys) do
++      primary_key   :id_survey
++      String        :name
++      DateTime      :created_at,   default: Sequel::CURRENT_TIMESTAMP
++      DateTime      :updated_at,   default: Sequel::CURRENT_TIMESTAMP
+     end
+-  
+-    down do
+-      drop_table(:surveys)
+-    end
+-  end
+\ No newline at end of file
++  end
++
++  down do
++    drop_table(:surveys)
++  end
++end
+diff --git a/db/migrations/00006_create_responses_table.rb b/db/migrations/00006_create_responses_table.rb
+index 919b453..c7a5462 100644
+--- a/db/migrations/00006_create_responses_table.rb
++++ b/db/migrations/00006_create_responses_table.rb
+@@ -1,13 +1,15 @@
++# frozen_string_literal: true
++
+ Sequel.migration do
+-    up do
+-      create_table(:responses) do
+-        primary_key   :id_response
+-        DateTime      :created_at,   default: Sequel::CURRENT_TIMESTAMP
+-        DateTime      :updated_at,   default: Sequel::CURRENT_TIMESTAMP
+-      end
++  up do
++    create_table(:responses) do
++      primary_key   :id_response
++      DateTime      :created_at,   default: Sequel::CURRENT_TIMESTAMP
++      DateTime      :updated_at,   default: Sequel::CURRENT_TIMESTAMP
+     end
+-  
+-    down do
+-      drop_table(:responses)
+-    end
+-  end
+\ No newline at end of file
++  end
++
++  down do
++    drop_table(:responses)
++  end
++end
+diff --git a/db/migrations/00007_create_choices_table.rb b/db/migrations/00007_create_choices_table.rb
+index c9c360c..d183c66 100644
+--- a/db/migrations/00007_create_choices_table.rb
++++ b/db/migrations/00007_create_choices_table.rb
+@@ -1,14 +1,16 @@
++# frozen_string_literal: true
++
+ Sequel.migration do
+-    up do
+-      create_table(:choices) do
+-        primary_key   	:id_choice
+-        String		      :text	
+-        DateTime      	:created_at,   default: Sequel::CURRENT_TIMESTAMP
+-        DateTime      	:updated_at,   default: Sequel::CURRENT_TIMESTAMP
+-      end
+-    end
+-  
+-    down do
+-      drop_table(:choices)
++  up do
++    create_table(:choices) do
++      primary_key :id_choice
++      String :text
++      DateTime      	:created_at,   default: Sequel::CURRENT_TIMESTAMP
++      DateTime      	:updated_at,   default: Sequel::CURRENT_TIMESTAMP
+     end
+   end
++
++  down do
++    drop_table(:choices)
++  end
++end
+diff --git a/db/migrations/00008_create_outcomes_table.rb b/db/migrations/00008_create_outcomes_table.rb
+index b00ffcb..1ff303e 100644
+--- a/db/migrations/00008_create_outcomes_table.rb
++++ b/db/migrations/00008_create_outcomes_table.rb
+@@ -1,13 +1,15 @@
++# frozen_string_literal: true
++
+ Sequel.migration do
+-    up do
+-      create_table(:outcomes) do
+-        primary_key   	:id_outcome
+-        DateTime      	:created_at,   default: Sequel::CURRENT_TIMESTAMP
+-        DateTime      	:updated_at,   default: Sequel::CURRENT_TIMESTAMP
+-      end
++  up do
++    create_table(:outcomes) do
++      primary_key   	:id_outcome
++      DateTime      	:created_at,   default: Sequel::CURRENT_TIMESTAMP
++      DateTime      	:updated_at,   default: Sequel::CURRENT_TIMESTAMP
+     end
+-  
+-    down do
+-      drop_table(:outcomes)
+-    end
+-  end
+\ No newline at end of file
++  end
++
++  down do
++    drop_table(:outcomes)
++  end
++end
+diff --git a/db/migrations/00009_alter_table_question.rb b/db/migrations/00009_alter_table_question.rb
+index 8f49f60..e4a381e 100644
+--- a/db/migrations/00009_alter_table_question.rb
++++ b/db/migrations/00009_alter_table_question.rb
+@@ -1,18 +1,15 @@
+-Sequel.migration do
+-    up do
+-        alter_table(:questions)do
+-            add_column :type, String
+-        end
+-    end
++# frozen_string_literal: true
+ 
+-    down do
+-        alter_table(:questions)do
+-            drop_column :type
+-        end
++Sequel.migration do
++  up do
++      alter_table(:questions) do # rubocop:todo Layout/IndentationWidth
++          add_column :type, String # rubocop:todo Layout/IndentationWidth
++      end
++  end
++
++  down do
++    alter_table(:questions) do
++        drop_column :type # rubocop:todo Layout/IndentationWidth
+     end
++  end
+ end
+-
+-
+-
+- 
+-  
+\ No newline at end of file

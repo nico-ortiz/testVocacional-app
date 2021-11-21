@@ -57,6 +57,5 @@ class App < Sinatra::Base
     erb :finish_template
   end
 
-
 end
 
