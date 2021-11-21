@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/d1b528746c.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href = "careers.css" rel = "stylesheet" type ="text/css">
+        <title>Test vocacional - Careeras</title>
+    </head>
+
+
+    <body>
+        <div class="navegador">
+            <ul>
+                <li><a href="Main" style="text-decoration:none"><i class="fas fa-home"></i> Menu principal</a></li>
+                <li><a href="careers" style="text-decoration:none"><i class="fas fa-clipboard-list"></i>  Menu carreras</a></li>
+                <li><a href="career-query" style="text-decoration:none"><i class="fas fa-search"></i> Consulta</a></li>
+            </ul>
+        </div> 
+        
+        <h1>CARRERAS</h1>
+
+        <form id="buscador" action="/search-career" method="GET">
+            <input class="input-placeholder" name="career_name" type="search" placeholder=" Buscar carrera...">
+            <input class="boton" type="submit" value="Consultar">
+        </form>
+
+        <div class='careerslist'>    
+            <ul>
+                <% @careers.each do |career| %>
+                <li>   
+                    <form action="/career" method="GET">
+                        <input type="hidden" name="career_name" value="<%=career.name%>">
+                        <button><%=career.name%></button>
+                    </form>
+                </li>
+                <% end %>
+            </ul>
+        </div>
+        <footer>
+                <img src="images/logoUNRC.ico">
+
+                <div class="rights"><h4>Test vocacional office, Avenida Siempreviva 742, Springfield, Estados Unidos. </h4>
+
+                <p>&copy Copyright 2021 test vocacional | Todos los derechos reservados. </p> </div>
+
+                <h3>Contactos:</h3>
+                    <h5><ul>
+                            <li> 
+                            Nicolas Ortiz:  nicortiz1234@gmail.com
+                            </li>
+                            <li>  
+                            Joaquin Moran:  joacomoran6@gmail.com
+                            </li>
+                            <li>  
+                            Agustin Giungi: agustingiungi98@gmail.com
+                            </li>
+                        </ul> 
+                    </h5>                                    
+        </footer>
+    
+    </body>
+
+    
+</html>
