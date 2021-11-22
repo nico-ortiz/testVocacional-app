@@ -15,9 +15,13 @@ class App < Sinatra::Base
     erb :landing
   end
   
-
   get '/vocational_test' do
     erb :user_load
+  end
+
+  not_found do 
+    status 404
+    erb :error_view404
   end
 
 end
