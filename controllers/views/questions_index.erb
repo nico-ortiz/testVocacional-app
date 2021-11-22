@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test vocacional</title>
+        <script src="https://kit.fontawesome.com/d1b528746c.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">      
+        <link href = "questions.css" rel = "stylesheet" type ="text/css">
+    </head>
+
+    <body>
+        <div class="navegador">
+            <ul>
+                <li><a href="Main" style="text-decoration:none"><i class="fas fa-home"></i> Menu principal</a></li>
+                <li><a href="careers" style="text-decoration:none"><i class="fas fa-clipboard-list"></i>  Menu carreras</a></li>
+            </ul>
+        </div>
+        <h1>Test vocacional</h1>
+        <form action='/responses' method='POST'>
+            <input type='hidden' name='survey_id' value='<%=@survey.id%>' required >  
+
+            <ul>
+                <%@questions.each do |question|%>
+                    <li class="preg"><%=question.description %></li>
+                    <div class="botones">
+                    <td>
+                        <%question.choices.each do |choice|%>
+                            <input type='radio' name='<%=question.id%>' value='<%=choice.id%>' required > <%=choice.text%> 
+                            <br/>
+                        <%end%>
+
+                        <input type='hidden' name='question_id[]' value='<%=question.id%>' required >
+                    </td>   
+                </div>
+                <%end%>
+            </ul>
+            <button type='submit'>Enviar</button>
+        </form>
+        <footer>
+                <img src="images/logoUNRC.ico">
+
+                <div class="rights"><h4>Test vocacional office, Avenida Siempreviva 742, Springfield, Estados Unidos. </h4>
+
+                <p>&copy Copyright 2021 test vocacional | Todos los derechos reservados. </p> </div>
+
+                <h3>Contactos:</h3>
+                    <h5><ul class="mails">
+                            <li> 
+                            Nicolas Ortiz:  nicortiz1234@gmail.com
+                            </li>
+                            <li>  
+                            Joaquin Moran:  joacomoran6@gmail.com
+                            </li>
+                            <li>  
+                            Agustin Giungi: agustingiungi98@gmail.com
+                            </li>
+                        </ul> 
+                    </h5>                                    
+        </footer>
+    </body>
+</html>

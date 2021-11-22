@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/d1b528746c.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">      
+        <link href = "resultado.css" rel = "stylesheet" type ="text/css">
+        <title>Resultado del Test</title>
+    </head>
+
+    <body>
+        <div class="navegador">
+            <ul>
+                <li><a href="Main" style="text-decoration:none"><i class="fas fa-home"></i> Menu principal</a></li>
+                <li><a href="careers" style="text-decoration:none"><i class="fas fa-clipboard-list"></i>  Menu carreras</a></li>
+            </ul>
+        </div>
+        <div id="result">
+            <h1>¡Carrera Obtenida!</h1>
+        </div> 
+        <div class="info">
+            <% sites = {
+                "Economia" => {"img" => "https://laopinion.de/wp-content/uploads/2019/02/Ishbel-Flores-002-820x394.jpg", "text" => "El Licenciado en Economía es un profesional comprometido éticamente con la comunidad en la que está inmerso contando con una sólida formación teórica, analítica y experimental, lo que le permite la medición, modelización y comprensión de los fenómenos económicos y sociales. Acciones que desarrollará desde una perspectiva crítica, considerando el impacto social, ambiental y económico que potencialmente tiene su desempeño profesional." ,"page" => "https://www.eco.unrc.edu.ar/seccion/grado/plan-estudios-le/"},
+                "Agronomia" => {"img" => "https://agriculturers.com/wp-content/uploads/2020/04/Agronomia-llama-a-producir-alimentos-en-casa-1000x500.jpg" , "text" => "Ingeniero Agrónomo es la carrera en la que se forman profesionales con la capacidad de generar y eficientar el uso de tecnologías en la producción de alimentos. El Ingeniero Agrónomo integra sus conocimientos para la mejora de los sistemas de producción agropecuaria y forestal, contribuye al aprovechamiento y conservación de los recursos filogenéticos, así como la organización de productores mediante recursos administrativos que posibiliten la autogestión hacia un desarrollo rural sustentable.", "page" => "https://www.unrc.edu.ar/unrc/carreras/ayv_ingenieria_agronomica.htm"},
+                "Arquitectura" => {"img" => "https://encolombia.com/wp-content/uploads/2012/12/Carrera-Arquitectura-Educacion.jpg" , "text" => "La Carrera de Arquitectura adopta como punto de partida el Perfil establecido por la normativa nacional, que define las competencias de base que deben poseer ineludiblemente los egresados al finalizar su paso por la carrera de grado.", "page" => "https://um.edu.ar/carreras/arquitectura-y-urbanismo/"},
+                "Computacion" => {"img" => "https://www.itsitio.com/wp-content/uploads/2019/10/5d9e0475cef912c94360276a-780x405.jpg" , "text" => "La carrera en Ciencias de la Computación te permitirá tener un conocimiento amplio de las nuevas tecnologías de la información, para resolver problemas de control y automatización computacional." , "page" => "https://www.unrc.edu.ar/unrc/carreras/ProgAsig2.php?n=BatVf5iHwU0Fx5G7YNW8kNLQ%2BhOdQH4W7AWg7BMXHW8%3D"},
+                "Filosofia" => {"img" => "https://www.escogetucarrera.com/wp-content/uploads/2020/09/Carrera-de-filosofia.jpg", "text" =>"La Filosofía es una disciplina que estudia y reflexiona constantemente sobre los enigmas constitutivos a la esencia del ser humano. La carrera propone diversas perspectivas de abordaje a partir de la historia y de otras disciplinas, como la metafísica, ética, gnoseología, estética, etc.", "page" =>"https://www.unrc.edu.ar/unrc/carreras/ProgAsig5.php?n=jJ3xRJeQsn2Iok1HQpVZHRiddh1Ede0JgFuD1shHXRc%3D"},
+                "Arte" => {"img" => "https://kaikucaffelatte.com/blog/wp-content/uploads/2020/09/dia-mundial-artista-plastico.jpg", "text" => "La Carrera de Artes se dedica al estudio de la Teoría de las Artes, su historia y las diversas manifestaciones artísticas que de ella se desprenden, a través de reflexiones conceptuales y críticas.", "page" => "https://www.unrc.edu.ar/unrc/estudiar/arte.php"},
+                "Educacion Fisica" => {"img" => "https://cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/GNY74J6RMBDZBJME6BK6PWLCPE.jpg", "text" =>"La carrera de Educación Física y Deporte no sólo te enseñará sobre el cuerpo humano y las formas adecuadas de practicar una disciplina deportiva. Además, te brindará conocimientos sobre nutrición para que puedas optimizar el rendimiento de deportistas y personas interesadas en involucrarse en este tipo de actividades.", "page" =>"https://www.unrc.edu.ar/unrc/carreras/ProgAsig5.php?n=AuhjnSverGQluznWeQfe4mnyiyabZwQt90%2FIl6GA4RA%3D"},
+                "Fisica" => {"img" => "https://okdiario.com/img/2017/03/01/fisica-655x368.jpg", "text" =>"La Física es la ciencia que estudia las propiedades de la naturaleza con ayuda de la Matemática. Se encarga de analizar las características de la energía, el tiempo y la materia, así como también los vínculos que se establecen entre ellas.", "page" =>"https://www.unrc.edu.ar/unrc/carreras/ProgAsig2.php?n=tQPxQVYkZmwPj2Sl%2BtQyhVuUVwBge%2Fjjs%2F5a3WgGbeQ%3D"},
+                "Geologia" => {"img" =>"https://presslatam.cl/wp-content/uploads/2020/11/unnamed-5-1024x684.jpg" , "text" =>"Un Geólogo es un profesional que estudia la tierra, su composición, su evolución y sus procesos actuales. La Geología es la ciencia que permite el hallazgo de nuevos recursos minerales y energéticos, al igual que ayuda entender los fenómenos que originaron y que siguen modelando el planeta", "page" =>"https://www.unrc.edu.ar/unrc/carreras/ProgAsig2.php?n=pRWKdi%2Fd%2FJl4mRrgaWAxd2A96dUddFPYakaXqOo0PYU%3D"},
+                "Historia" => {"img" => "https://micarrerauniversitaria.com/wp-content/uploads/2018/03/carrera-de-historia-2.jpg", "text" =>"La Licenciatura en Historia es una carrera que tiene como objetivo en el estudio detallado y crítico del desarrollo de los acontecimientos históricos políticos, sociales, artísticos, naturales, económicos, de gran y pequeña escala para comprender mejor la actualidad a través de la revisión del pasado.", "page" =>"https://www.unrc.edu.ar/unrc/carreras/ProgAsig5.php?n=rV8U7R3EWnVoZI79l5WWgcNKLdq3hYSQuzMdkxUSlWE%3D"},
+                "Literatura" => {"img" =>"https://www.ecoparquedetrasmiera.com/wp-content/uploads/2020/12/test-libros1.jpg" , "text" =>"Uno de los objetivos principales de la carrera de Literatura es el de formar profesionales con conocimientos lingüísticos que estén vinculados a la comunicación y al arte. ... Es decir que una persona formada la carrera de Literatura cuenta con las herramientas para analizar y evaluar composiciones literarias.", "page" =>"https://www.unrc.edu.ar/unrc/carreras/ProgAsig5.php?n=%2FBpLfBDYxXmQaxDePIM%2Bvqvf5cLyAysalAWtwPjvud4%3D"},
+                "Matematicas" => {"img" => "https://factorcapitalhumano.com/wp-content/uploads/2020/06/estudiar-matematicas-definicion-eleccion-carrera.jpg", "text" =>"La Carrera de Matemática forma profesionales capaces de resolver problemas lógicos, estadísticos, y todos aquellos que requieran solucionar ecuaciones numéricas. Es necesaria para todo lo que engloba el campo de las ciencias exactas.", "page" =>"https://www.unrc.edu.ar/unrc/carreras/ProgAsig2.php?n=UC55Mug%2BT2YolRq1o%2F1ssRc3ocBCtzvFfjJku4bkUVE%3D"},
+                "Medicina" => {"img" => "https://www.cursosycarreras.com.mx/orientacion/wp-content/uploads/2021/02/carerra-de-medicina.jpg", "text" =>"Comprenden el estudio de las ciencias básicas y clínicas de la salud, con una clara orientación humanística. Abordan los procesos asociados a las rehabilitaciones física y mental y al desarrollo de un soporte social y cultural adecuado que las promuevan.", "page" =>"https://www.unrc.edu.ar/unrc/carreras/ProgAsig5.php?n=dd%2FT761qSpCsqPG5DfmRIkrm461TRuzccCMYqJ%2B%2Bv1w%3D"},
+                "Periodismo" => {"img" => "https://guiauniversitaria.mx/wp-content/uploads/2018/12/mitos-sobre-el-periodismo.jpg", "text" =>"El Periodista es una persona preparada para informar a la sociedad acerca de los acontecimientos, sucesos y hechos relevantes que se producen. Su tarea consiste en buscar, investigar, chequear, seleccionar, jerarquizar, tratar y difundir temas e informaciones de interés público.", "page" =>"https://www.unrc.edu.ar/unrc/carreras/ProgAsig5.php?n=nm%2BbeKeSWYL8zSYqQxDEk7H7SUVig99bhQOHGJSkTMU%3D"},
+                "Quimica" => {"img" => "https://unibecarios.mx/blog/wp-content/uploads/2018/02/shutterstock.jpg", "text" =>"El título de licenciado en química habilita al egresado para intervenir diseñando, ejecutando y supervisando estudios o investigaciones referidos a las sustancias constitutivas de la materia y de sus principales componentes,  diseñando  y produciendo desarrollos propios de  laboratorios o empresas químicas y vinculadas, realizando arbitrajes y peritajes, desempeñando la docencia, interviniendo en el asesoramiento a plantas y organismos oficiales o privados, asesorando en la elaboración de leyes y códigos y proyectando y ejecutando tareas en diferentes áreas y, en particular, de preservación, racionalización y recuperación ambienta", "page" =>"https://www.unrc.edu.ar/unrc/carreras/ProgAsig2.php?n=jHkVW45CPW5kIWNIkiemrHnaI9ydncBO36GTxfGawAU%3D"},
+                "Sociologia" => {"img" =>"https://www.buscouniversidad.com.ar/orientacion/wp-content/uploads/2016/02/carrera-de-sociolog%C3%ADa.jpg" , "text" =>"La Carrera de Sociología ha tenido históricamente el privilegio de albergar identidades académicas y políticas plurales. En el marco de esa diversidad, se produjeron notorios aportes al conocimiento científico del mundo social, junto a la formación de generaciones de sociólogas y sociólogos. Todo ello forjado al calor del pensamiento crítico, el debate, la reflexión profunda y la intervención en articulación con actores sociales, practicando siempre una mirada atenta a los devenires de las coyunturas locales, regionales y globales. La carrera aporta a una Facultad donde se despliega una formación de calidad y se practica la investigación en estrecha articulación con la docencia, con la extensión y con la transferencia, con el compromiso político de aportar a un proyecto de Universidad pública, gratuita, masiva y de calidad, democrática, autogestionada y vinculada de manera indisoluble con los intereses de las mayorías.", "page" =>"http://www.sociales.uba.ar/carreras/sociologia/"},
+                "Veterinaria" => {"img" =>"https://cdn.euroinnova.edu.es/img/subidasEditor/fotolia_39639815_subscription_monthly_m-1611921719.webp" , "text" =>"El Veterinario es un profesional universitario con una formación de carácter generalista, humanista, crítico y reflexivo apto para comprender y traducir las necesidades de individuos, grupos sociales y comunidades con relación a las actividades inherentes al ejercicio profesional.", "page" =>"https://www.unrc.edu.ar/unrc/carreras/ayv_medicina_veterinaria.htm"}
+            }%>
+
+            <h2><%=@career%></h2>
+            <b><img src=<%=sites[@career]["img"]%>></b>
+            <p> <%=sites[@career]["text"]%> </p>
+            <a href=<%=sites[@career]["page"]%> target="_blank"> Mas info</a>
+        </div>
+        <br/>
+        <footer>
+                <img src="images/logoUNRC.ico">
+
+                <div class="rights"><h4>Test vocacional office, Avenida Siempreviva 742, Springfield, Estados Unidos. </h4>
+
+                <p>&copy Copyright 2021 test vocacional | Todos los derechos reservados. </p> </div>
+
+                <h3>Contactos:</h3>
+                    <h5><ul>
+                            <li> 
+                            Nicolas Ortiz:  nicortiz1234@gmail.com
+                            </li>
+                            <li>  
+                            Joaquin Moran:  joacomoran6@gmail.com
+                            </li>
+                            <li>  
+                            Agustin Giungi: agustingiungi98@gmail.com
+                            </li>
+                        </ul> 
+                    </h5>                                    
+        </footer>
+    </body>
+</html>
