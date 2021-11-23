@@ -40,6 +40,7 @@
            
             <%if Career.find(name: @career) == nil%>
                 <h1>Carrera no encontrada.</h1>
+                <b><img src=https://img.freepik.com/foto-gratis/triste-desesperada-mujer-llorando-llorando-manos-juntas-lagrimas-ojos-problemas_122732-2273.jpg?size=626&ext=jpg></b>
             <%else%>
                 <h1><%=@career%></h1>
                 <b><img src=<%=sites[@career]["img"]%>></b>

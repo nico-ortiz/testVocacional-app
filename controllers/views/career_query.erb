@@ -18,7 +18,7 @@
         <div class="eleccion_carrera">
              <form class="eleccion_carrera" action="finished_survey" method="GET">
                 <label for="carrera"><p>Carrera a consultar:</p></label><br>
-                <input placeholder="Elige la carrera a consultar" list="carreras" name="carrera" id="carrera" autocomplete="off" >
+                <input placeholder="Elige la carrera a consultar" list="carreras" name="carrera" id="carrera" autocomplete="off" required>
                 <datalist id="carreras">
                     <%@careers.each do |career|%>
                     <option value= <%=career.name%>></option>
